@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/pages/animals.dart'; //temporary
 import 'package:sampleproject/pages/languagepage.dart';
+import 'package:sampleproject/pages/progressPage.dart';
 
 class option extends StatelessWidget {
   @override
@@ -59,7 +60,7 @@ class option extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => ProgressPage(),
                 ),
               );
             },
