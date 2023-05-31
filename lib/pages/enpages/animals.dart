@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class enbodyParts extends StatelessWidget {
+class animals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          "Body",
+          "Animals",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
             fontWeight: FontWeight.bold,
@@ -24,78 +24,58 @@ class enbodyParts extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/teeth.png',
-            text: 'Teeth',
+            image: 'image/cow.png',
+            text: 'Cow',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/eye.png',
-            text: 'Eye',
+            image: 'image/dog.png',
+            text: 'Dog',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/nose.png',
-            text: 'Nose',
+            image: 'image/cat.png',
+            text: 'Cat',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/back.png',
-            text: 'Back',
+            image: 'image/mouse.png',
+            text: 'Mouse',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/buttocks.png',
-            text: 'Ass',
+            image: 'image/goat.png',
+            text: 'Goat',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/chest.png',
-            text: 'Chest',
+            image: 'image/hen.png',
+            text: 'Hen',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/ear.png',
-            text: 'Ear',
+            image: 'image/sheep.png',
+            text: 'Sheep',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/hello.png',
-            text: 'Hand',
+            image: 'image/donkey.png',
+            text: 'Donkey',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/knee.png',
-            text: 'Knee',
+            image: 'image/horse.png',
+            text: 'Horse',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/legs.png',
-            text: 'Leg',
+            image: 'image/robin.png',
+            text: 'Bird',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/nail.png',
-            text: 'Nail',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/open-mouth.png',
-            text: 'Mouth',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/stomach.png',
-            text: 'Stomach',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/neck.png',
-            text: 'Neck',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/tongue.png',
-            text: 'Tongue',
+            image: 'image/hyena.png',
+            text: 'Hyena',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

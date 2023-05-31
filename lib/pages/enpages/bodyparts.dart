@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class encolors extends StatelessWidget {
+class bodyparts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          "Colors",
+          "Body",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
             fontWeight: FontWeight.bold,
@@ -24,58 +24,78 @@ class encolors extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/black color.png',
-            text: 'Black',
+            image: 'image/teeth.png',
+            text: 'Teeth',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/oval.png',
-            text: 'White',
+            image: 'image/eye.png',
+            text: 'Eye',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/red circle.png',
-            text: 'Red',
+            image: 'image/nose.png',
+            text: 'Nose',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/green color.png',
-            text: 'Green',
+            image: 'image/back.png',
+            text: 'Back',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/yellow circle.png',
-            text: 'Yellow',
+            image: 'image/buttocks.png',
+            text: 'Ass',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/blue color.png',
-            text: 'Blue',
+            image: 'image/chest.png',
+            text: 'Chest',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/pink color.png',
-            text: 'Pink',
+            image: 'image/ear.png',
+            text: 'Ear',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/grey color.png',
-            text: 'Grey',
+            image: 'image/hello.png',
+            text: 'Hand',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/brown color.png',
-            text: 'Brown',
+            image: 'image/knee.png',
+            text: 'Knee',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/orange color.png',
-            text: 'Orange',
+            image: 'image/legs.png',
+            text: 'Leg',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/purple color.png',
-            text: 'Purple',
+            image: 'image/nail.png',
+            text: 'Nail',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/open-mouth.png',
+            text: 'Mouth',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/stomach.png',
+            text: 'Stomach',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/neck.png',
+            text: 'Neck',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/tongue.png',
+            text: 'Tongue',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

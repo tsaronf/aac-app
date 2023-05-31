@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class color extends StatelessWidget {
+class feelings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          "ቀለም",
+          "Feelings",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
             fontWeight: FontWeight.bold,
@@ -24,58 +24,48 @@ class color extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/black color.png',
-            text: 'ጥቁር',
+            image: 'image/afraid.png',
+            text: 'Scared',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/oval.png',
-            text: 'ነጭ',
+            image: 'image/bored.png',
+            text: 'Bored',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/red circle.png',
-            text: 'ቀይ',
+            image: 'image/cold.png',
+            text: 'Cold',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/green color.png',
-            text: 'አረንጓዴ',
+            image: 'image/fatigue.png',
+            text: 'Tired',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/yellow circle.png',
-            text: 'ቢጫ',
+            image: 'image/happy.png',
+            text: 'Happy',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/blue color.png',
-            text: 'ሠማያዊ',
+            image: 'image/hot.png',
+            text: 'Hot',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/pink color.png',
-            text: 'ሮዝ',
+            image: 'image/hungry.png',
+            text: 'Hungry',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/grey color.png',
-            text: 'ግራጫ',
+            image: 'image/nervous.png',
+            text: 'Afraid',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/brown color.png',
-            text: 'ቡኒ',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/orange color.png',
-            text: 'ብርቱካናማ',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/purple color.png',
-            text: 'ሐምራዊ',
+            image: 'image/thirsty.png',
+            text: 'Thirsty',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

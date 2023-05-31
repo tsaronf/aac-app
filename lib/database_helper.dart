@@ -6,28 +6,35 @@ import 'package:path/path.dart';
 class DatabaseHelper {
   static final DatabaseHelper _instance = new DatabaseHelper.internal();
   final List<Map<String, String>> listOfAmharicCategories = [
-    {'name': 'እንስሳ', 'machineName': 'am_animals'},
-    {'name': 'ምግብ', 'machineName': 'am_foods'},
-    {'name': 'የሰውነት ክፍል', 'machineName': 'am_bodyparts'},
-    {'name': 'የቤተሰብ አባላት', 'machineName': 'am_family'},
-    {'name': 'ድርጊት', 'machineName': 'am_activities'},
-    {'name': 'ቀለማት', 'machineName': 'am_color'},
-    {'name': 'ትዕዛዛት', 'machineName': 'am_instructions'},
-    {'name': 'ቁሳቁስ', 'machineName': 'am_materials'},
-    {'name': 'ምሳሌ', 'machineName': 'am_illustrations'},
-    {'name': 'ስሜት', 'machineName': 'am_feelings'},
+    {'name': 'እንስሳ', 'machineName': 'am_animals', 'image': 'dog'},
+    {'name': 'ምግብ', 'machineName': 'am_foods', 'image': 'dinner'},
+    {'name': 'የሰውነት ክፍል', 'machineName': 'am_bodyparts', 'image': 'humanoid'},
+    {'name': 'የቤተሰብ አባላት', 'machineName': 'am_family', 'image': 'family'},
+    {'name': 'ድርጊት', 'machineName': 'am_activities', 'image': 'mental-health'},
+    {'name': 'ቀለማት', 'machineName': 'am_color', 'image': 'colour'},
+    {'name': 'ትዕዛዛት', 'machineName': 'am_instructions', 'image': 'box'},
+    {'name': 'ቁሳቁስ', 'machineName': 'am_materials', 'image': 'box'},
+    {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'box'},
+    {'name': 'ስሜት', 'machineName': 'am_feelings', 'image': 'emotion'},
+    {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'emotion'}
   ];
   final List<Map<String, String>> listOfEnglishCategories = [
-    {'name': 'animals', 'machineName': 'animals'},
-    {'name': 'foods', 'machineName': 'foods'},
-    {'name': 'bodyparts', 'machineName': 'bodyparts'},
-    {'name': 'family', 'machineName': 'family'},
-    {'name': 'activities', 'machineName': 'activities'},
-    {'name': 'color', 'machineName': 'color'},
-    {'name': 'instructions', 'machineName': 'instructions'},
-    {'name': 'materials', 'machineName': 'materials'},
-    {'name': 'illustrations', 'machineName': 'illustrations'},
-    {'name': 'feelings', 'machineName': 'feelings'},
+    {'name': 'animals', 'machineName': 'animals', 'image': 'dog'},
+    {'name': 'foods', 'machineName': 'foods', 'image': 'dinner'},
+    {'name': 'bodyparts', 'machineName': 'bodyparts', 'image': 'humanoid'},
+    {'name': 'family', 'machineName': 'family', 'image': 'family'},
+    {
+      'name': 'activities',
+      'machineName': 'activities',
+      'image': 'mental-health'
+    },
+    {'name': 'color', 'machineName': 'color', 'image': 'colour'},
+    {'name': 'instructions', 'machineName': 'instructions', 'image': 'box'},
+    {'name': 'materials', 'machineName': 'materials', 'image': 'box'},
+    {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'box'},
+    {'name': 'feelings', 'machineName': 'feelings', 'image': 'emotion'},
+        {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
+
   ];
 
   factory DatabaseHelper() => _instance;
@@ -45,6 +52,7 @@ class DatabaseHelper {
   final String columnMachineName = 'machineName';
   final String columnIsFav = 'isFav';
   final String columnFavUpdatedAt = 'updatedAt';
+  final String columnImage = 'image';
 
   final String tableProgressAm = 'am_progress';
   final String columnIdAm = 'am_id';
@@ -57,6 +65,7 @@ class DatabaseHelper {
   final String columnMachineNameAm = 'am_machineName';
   final String columnIsFavAm = 'am_isFav';
   final String columnFavUpdatedAtAm = 'am_updatedAt';
+  final String columnImageAm = 'am_image';
 
   Future<Database?> get db async {
     if (_db != null) {
@@ -85,15 +94,17 @@ class DatabaseHelper {
       $columnFavCategoryName TEXT,
       $columnMachineName TEXT UNIQUE,
       $columnIsFav INTEGER DEFAULT 0,
-      $columnFavUpdatedAt INTEGER DEFAULT 0
+      $columnFavUpdatedAt INTEGER DEFAULT 0,
+      $columnImage TEXT
     )
     ''');
     listOfEnglishCategories.forEach((category) async {
       await db.insert(
-        '$tableFav',
+        tableFav,
         {
-          '$columnFavCategoryName': category['name'],
-          '$columnMachineName': category['machineName']
+          columnFavCategoryName: category['name'],
+          columnMachineName: category['machineName'],
+          columnImage: category['image']
         },
         conflictAlgorithm: ConflictAlgorithm.ignore,
       );
@@ -108,15 +119,17 @@ class DatabaseHelper {
       $columnFavCategoryNameAm TEXT,
       $columnMachineNameAm TEXT UNIQUE,
       $columnIsFavAm INTEGER DEFAULT 0,
-      $columnFavUpdatedAtAm INTEGER DEFAULT 0
+      $columnFavUpdatedAtAm INTEGER DEFAULT 0,
+      $columnImageAm TEXT
     )
     ''');
     listOfAmharicCategories.forEach((category) async {
       await db.insert(
-        '$tableFavAm',
+        tableFavAm,
         {
-          '$columnFavCategoryNameAm': category['name'],
-          '$columnMachineNameAm': category['machineName']
+          columnFavCategoryNameAm: category['name'],
+          columnMachineNameAm: category['machineName'],
+          columnImageAm: category['image']
         },
         conflictAlgorithm: ConflictAlgorithm.ignore,
       );
@@ -139,12 +152,11 @@ class DatabaseHelper {
   Future<List<Map>> getProgress(String table) async {
     var dbClient = await db;
     var result = table == tableProgress
-        ?
-        //english
-        await dbClient!.query(tableProgress,
-            columns: [columnCategoryName, columnTimestamp])
-        : await dbClient!.query(tableProgressAm,
-            columns: [columnCategoryNameAm, columnTimestampAm]);
+        ? await dbClient!.rawQuery(
+            "SELECT  $columnCategoryName, $columnTimestamp FROM $tableProgress ;")
+        : await dbClient!.rawQuery(
+            "SELECT  $columnCategoryNameAm, $columnTimestampAm FROM $tableProgressAm ;");
+
     return result.toList();
   }
 
@@ -155,16 +167,16 @@ class DatabaseHelper {
             'SELECT  $columnCategoryName, COUNT(*) as play_count FROM $tableProgress GROUP BY $columnCategoryName ORDER BY play_count DESC LIMIT 3;')
         : await dbClient!.rawQuery(
             'SELECT  $columnCategoryNameAm, COUNT(*) as play_count FROM $tableProgressAm GROUP BY $columnCategoryNameAm ORDER BY play_count DESC LIMIT 3;');
-    return result.toList();
+    return result;
   }
 
   Future<Object?> getMostActiveDayofTheWeek(String table) async {
     var dbClient = await db;
     var result = table == tableProgress
         ? await dbClient!.rawQuery(
-            "SELECT  strftime ('%w', $columnTimestamp) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgress GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;")
+            "SELECT strftime('%w', $columnTimestamp) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgress GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;")
         : await dbClient!.rawQuery(
-            "SELECT  strftime ('%w', $columnTimestampAm) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgressAm GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;");
+            "SELECT strftime('%w', $columnTimestampAm) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgressAm GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;");
     return result.toList().first['day_of_the_week'];
   }
 
@@ -191,25 +203,47 @@ class DatabaseHelper {
     }
   }
 
+  Future<int> removeFav(String table, String categoryName) async {
+    var dbClient = await db;
+    try {
+      table == tableProgress
+          ? await dbClient?.update(
+              '$tableFav',
+              {'$columnIsFav': 0},
+              where: '$columnFavCategoryName = ?',
+              whereArgs: [categoryName],
+            )
+          : await dbClient?.update(
+              '$tableFavAm',
+              {'$columnIsFavAm': 0},
+              where: '$columnFavCategoryNameAm = ?',
+              whereArgs: [categoryName],
+            );
+      return 1;
+    } catch (e) {
+      return -1;
+    }
+  }
+
   Future<List<Map>> getFavoriteCategories(String table) async {
     var dbClient = await db;
     var result = table == tableProgress
         ? await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryName FROM $columnFavCategoryName WHERE $columnIsFav = 1 ORDER BY $columnFavUpdatedAt DESC LIMIT 4;')
+            'SELECT $columnFavCategoryName FROM $tableFav WHERE $columnIsFav = 1 ORDER BY $columnFavUpdatedAt DESC LIMIT 4;')
         : await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryNameAm FROM $columnFavCategoryNameAm WHERE $columnIsFavAm = 1 ORDER BY $columnFavUpdatedAtAm DESC LIMIT 4;');
+            'SELECT $columnFavCategoryNameAm FROM $tableFavAm WHERE $columnIsFavAm = 1 ORDER BY $columnFavUpdatedAtAm DESC LIMIT 4;');
     ;
 
-    return result.toList();
+    return result;
   }
 
   Future<List<Map>> getCategories(String table) async {
     var dbClient = await db;
     var result = table == tableProgress
         ? await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryName, $columnMachineName, $columnIsFav FROM $tableFav ;')
+            'SELECT $columnFavCategoryName, $columnMachineName, $columnIsFav, $columnImage FROM $tableFav ;')
         : await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryNameAm, $columnMachineNameAm, $columnIsFavAm FROM $tableFavAm ;');
+            'SELECT $columnFavCategoryNameAm, $columnMachineNameAm, $columnIsFavAm, $columnImageAm FROM $tableFavAm ;');
 
     return result.toList();
   }

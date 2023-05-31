@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sampleproject/pages/animals.dart'; //temporary
 import 'package:sampleproject/pages/languagepage.dart';
+import 'package:sampleproject/pages/enprogressPage.dart';
 
 class enoptions extends StatelessWidget {
   @override
@@ -59,7 +59,7 @@ class enoptions extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => enprogressPage(),
                 ),
               );
             },
@@ -90,7 +90,7 @@ class enoptions extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => enprogressPage(),
                 ),
               );
             },
@@ -121,7 +121,7 @@ class enoptions extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => enprogressPage(),
                 ),
               );
             },

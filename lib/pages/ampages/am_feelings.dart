@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class enanimals extends StatelessWidget {
+class am_feelings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          "Animals",
+          "ስሜት",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
             fontWeight: FontWeight.bold,
@@ -24,58 +24,48 @@ class enanimals extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/cow.png',
-            text: 'Cow',
+            image: 'image/afraid.png',
+            text: 'ጭንቀት',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/dog.png',
-            text: 'Dog',
+            image: 'image/bored.png',
+            text: 'ድብርት',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/cat.png',
-            text: 'Cat',
+            image: 'image/cold.png',
+            text: 'ብርድ',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/mouse.png',
-            text: 'Mouse',
+            image: 'image/fatigue.png',
+            text: 'ድካም',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/goat.png',
-            text: 'Goat',
+            image: 'image/happy.png',
+            text: 'ደስተኛ',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/hen.png',
-            text: 'Hen',
+            image: 'image/hot.png',
+            text: 'ሙቀት',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/sheep.png',
-            text: 'Sheep',
+            image: 'image/hungry.png',
+            text: 'ረሐብ',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/donkey.png',
-            text: 'Donkey',
+            image: 'image/nervous.png',
+            text: 'ፍርሐት',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/horse.png',
-            text: 'Horse',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/robin.png',
-            text: 'Bird',
-            // audioFile: 'voice/Black.ogg',
-          ),
-          lastcard(
-            image: 'image/hyena.png',
-            text: 'Hyena',
+            image: 'image/thirsty.png',
+            text: 'ጥማት',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

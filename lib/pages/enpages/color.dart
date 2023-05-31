@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class animals extends StatelessWidget {
+class color extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text(
-          "እንስሳ",
+          "Colors",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
             fontWeight: FontWeight.bold,
@@ -24,58 +24,58 @@ class animals extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/cow.png',
-            text: 'ላም',
+            image: 'image/black color.png',
+            text: 'Black',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/dog.png',
-            text: 'ዉሻ',
+            image: 'image/oval.png',
+            text: 'White',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/cat.png',
-            text: 'ድመት',
+            image: 'image/red circle.png',
+            text: 'Red',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/mouse.png',
-            text: 'አይጥ',
+            image: 'image/green color.png',
+            text: 'Green',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/goat.png',
-            text: 'ፍየል',
+            image: 'image/yellow circle.png',
+            text: 'Yellow',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/hen.png',
-            text: 'ዶሮ',
+            image: 'image/blue color.png',
+            text: 'Blue',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/sheep.png',
-            text: 'በግ',
+            image: 'image/pink color.png',
+            text: 'Pink',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/donkey.png',
-            text: 'አህያ',
+            image: 'image/grey color.png',
+            text: 'Grey',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/horse.png',
-            text: 'ፈረስ',
+            image: 'image/brown color.png',
+            text: 'Brown',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/robin.png',
-            text: 'ወፍ',
+            image: 'image/orange color.png',
+            text: 'Orange',
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
-            image: 'image/hyena.png',
-            text: 'ጅብ',
+            image: 'image/purple color.png',
+            text: 'Purple',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

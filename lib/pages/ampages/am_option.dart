@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sampleproject/pages/animals.dart'; //temporary
+import 'package:sampleproject/pages/ampages/am_animals.dart'; //temporary
 import 'package:sampleproject/pages/languagepage.dart';
 import 'package:sampleproject/pages/progressPage.dart';
 
@@ -91,7 +91,7 @@ class option extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => am_animals(),
                 ),
               );
             },
@@ -122,7 +122,7 @@ class option extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => animals(),
+                  builder: (context) => am_animals(),
                 ),
               );
             },

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class enactivities extends StatelessWidget {
+class activities extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

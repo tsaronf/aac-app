@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
 
-class bodyparts extends StatelessWidget {
+class am_bodyparts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +96,16 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/tongue.png',
             text: 'ምላስ',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/hair.png',
+            text: 'ፀጉር',
+            // audioFile: 'voice/Black.ogg',
+          ),
+          lastcard(
+            image: 'image/head.png',
+            text: 'ጭንቅላት',
             // audioFile: 'voice/Black.ogg',
           ),
         ],

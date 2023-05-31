@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sampleproject/database_helper.dart';
 
-class ProgressPage extends StatefulWidget {
+class enprogressPage extends StatefulWidget {
   @override
-  _ProgressPageState createState() => _ProgressPageState();
+  _enprogressPageState createState() => _enprogressPageState();
 }
 
-class _ProgressPageState extends State<ProgressPage> {
+class _enprogressPageState extends State<enprogressPage> {
   final dbHelper = DatabaseHelper();
-  final dbType = "am_progress";
+  final dbType = "progress";
   List<Map> progressList = [];
   List<Map> mostActiveCategories = [];
   List<Map> topCategories = [];
@@ -44,40 +44,40 @@ class _ProgressPageState extends State<ProgressPage> {
     switch (day) {
       case "0":
         {
-          dayOfTheWeek = 'እሁድ';
+          dayOfTheWeek = 'Sunday';
         }
         break;
 
       case "1":
         {
-          dayOfTheWeek = 'ሰኞ';
+          dayOfTheWeek = 'Monday';
         }
         break;
       case "2":
         {
-          dayOfTheWeek = 'ማክሰኞ';
+          dayOfTheWeek = 'Tuesday';
         }
         break;
 
       case "3":
         {
-          dayOfTheWeek = 'እሮብ';
+          dayOfTheWeek = 'Wednesday';
         }
         break;
       case "4":
         {
-          dayOfTheWeek = 'ሐሙስ';
+          dayOfTheWeek = 'Thursday';
         }
         break;
 
       case "5":
         {
-          dayOfTheWeek = 'አርብ';
+          dayOfTheWeek = 'Friday';
         }
         break;
       case "6":
         {
-          dayOfTheWeek = 'ቅዳሜ';
+          dayOfTheWeek = 'Saturday';
         }
         break;
 
@@ -94,12 +94,12 @@ class _ProgressPageState extends State<ProgressPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('የአጠቃቀም ትራክ'),
+        title: const Text('Progress'),
       ),
       body: ListView(
         children: [
           Text(
-            "ከፍተኛ 3 ንቁ ምድቦች",
+            "Top 3 Active categories",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           Container(
@@ -108,7 +108,7 @@ class _ProgressPageState extends State<ProgressPage> {
               itemCount: mostActiveCategories.length,
               itemBuilder: (BuildContext context, int index) {
                 String categoryName =
-                    mostActiveCategories[index]['am_categoryName'];
+                    mostActiveCategories[index]['categoryName'];
                 return ListTile(
                   title: Text(categoryName),
                 );
@@ -122,7 +122,7 @@ class _ProgressPageState extends State<ProgressPage> {
             height: 20,
           ),
           Text(
-            "የሳምንቱ በጣም ንቁ ቀን",
+            "Most Active Day of the Week",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           Text(mostActiveDay),
@@ -138,8 +138,8 @@ class _ProgressPageState extends State<ProgressPage> {
             child: ListView.builder(
               itemCount: progressList.length,
               itemBuilder: (BuildContext context, int index) {
-                String timestamp = progressList[index]['am_timestamp'];
-                String categoryName = progressList[index]['am_categoryName'];
+                String timestamp = progressList[index]['timestamp'];
+                String categoryName = progressList[index]['categoryName'];
 
                 return ListTile(
                   title: Text(categoryName),
