@@ -72,7 +72,7 @@ class option extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   child: Row(
                     children: <Widget>[
-                      Text('Progress',
+                      Text('እድገት',
                           style: TextStyle(
                             color: Colors.teal.shade800,
                             fontFamily: 'Source',
@@ -91,7 +91,7 @@ class option extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => am_animals(),
+                  builder: (context) => ProgressPage(),
                 ),
               );
             },
@@ -103,38 +103,7 @@ class option extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   child: Row(
                     children: <Widget>[
-                      Text('Progress',
-                          style: TextStyle(
-                            color: Colors.teal.shade800,
-                            fontFamily: 'Source',
-                            fontSize: 25.0,
-                          )),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () {
-              // AssetsAudioPlayer.newPlayer()
-              //     .open(Audio('assets/sounds/tap.wav'));
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => am_animals(),
-                ),
-              );
-            },
-            child: Container(
-              height: 100.0,
-              child: Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Row(
-                    children: <Widget>[
-                      Text('Settings',
+                      Text('ማስተካከያ',
                           style: TextStyle(
                             color: Colors.teal.shade800,
                             fontFamily: 'Source',

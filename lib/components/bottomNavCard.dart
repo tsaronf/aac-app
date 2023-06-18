@@ -85,17 +85,20 @@ class BottomNavCard extends StatelessWidget {
                 Image.asset(
                   'image/$image.png',
 
-                  height: 100.0,
-                  width: 100.0, // set the height of the image
+                  height: 90.0,
+                  width: 90.0, // set the height of the image
                 ),
-                SizedBox(height: 8.0),
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontFamily: 'Pacifico',
-                    fontWeight: FontWeight.normal,
-                    fontSize: 15.0,
-                    color: Colors.black,
+                SizedBox(height: 4.0),
+                Padding(
+                  padding: const EdgeInsets.only(bottom : 4.0),
+                  child: Text(
+                    text,
+                    style: TextStyle(
+                      fontFamily: 'Pacifico',
+                      fontWeight: FontWeight.normal,
+                      fontSize: 15.0,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],

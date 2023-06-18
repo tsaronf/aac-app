@@ -13,7 +13,8 @@ class _enprogressPageState extends State<enprogressPage> {
   List<Map> progressList = [];
   List<Map> mostActiveCategories = [];
   List<Map> topCategories = [];
-  String mostActiveDay = '';
+  List<Map> mostActiveDays = [];
+
 
   @override
   void initState() {
@@ -27,14 +28,13 @@ class _enprogressPageState extends State<enprogressPage> {
     List<Map> list = await dbHelper.getProgress(dbType);
     List<Map> categories = await dbHelper.getMostActiveCategories(dbType);
     // List<Map> favs = await dbHelper.getCategories(dbType);
-    Object? day = await dbHelper.getMostActiveDayofTheWeek(dbType);
+    List<Map> days = await dbHelper.getMostActiveDayofTheWeek(dbType);
 
-    String dayOfTheWeek = getDayofWeek(day);
 
     setState(() {
       progressList = list;
+      mostActiveDays = days;
 
-      mostActiveDay = dayOfTheWeek;
       mostActiveCategories = categories;
     });
   }
@@ -90,65 +90,92 @@ class _enprogressPageState extends State<enprogressPage> {
     return dayOfTheWeek;
   }
 
-  @override
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Progress'),
+        title: Text('Progress'),
       ),
-      body: ListView(
-        children: [
-          Text(
-            "Top 3 Active categories",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Container(
-            height: 150,
-            child: ListView.builder(
-              itemCount: mostActiveCategories.length,
-              itemBuilder: (BuildContext context, int index) {
-                String categoryName =
-                    mostActiveCategories[index]['categoryName'];
-                return ListTile(
-                  title: Text(categoryName),
-                );
-              },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Top Categories",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Most Active Day of the Week",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text(mostActiveDay),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "All Progress",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Container(
-            height: 300,
-            child: ListView.builder(
-              itemCount: progressList.length,
-              itemBuilder: (BuildContext context, int index) {
-                String timestamp = progressList[index]['timestamp'];
-                String categoryName = progressList[index]['categoryName'];
+            SizedBox(height: 10),
+            Container(
+              height: 200,
+              child: ListView.builder(
+                itemCount: mostActiveCategories.length,
+                itemBuilder: (BuildContext context, int index) {
+                  String categoryName =
+                      mostActiveCategories[index]['categoryName'];
+                  Widget categoryImage = Image.asset(
+                    'image/favimg.jpg',
+                    width: 40,
+                    height: 40,
+                  );
 
-                return ListTile(
-                  title: Text(categoryName),
-                  subtitle: Text(timestamp),
-                );
-              },
+                  return Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: categoryImage,
+                      ),
+                      SizedBox(width: 10),
+                      Text(categoryName, style: TextStyle(fontSize: 18),),
+                    ],
+                  );
+                },
+              ),
             ),
-          ),
-        ],
+            SizedBox(height: 20),
+            Text(
+              "Most Active Day of the Week",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(height: 5),
+                 Container(
+              height: 200,
+              child: ListView.builder(
+                itemCount: mostActiveCategories.length,
+                itemBuilder: (BuildContext context, int index) {
+                  String dayName =
+                      mostActiveDays[index]['day_of_the_week'];
+                  Widget dateImage = Image.asset(
+                   'image/calimg.jpg',
+                    width: 40,
+                    height: 40,
+                  );
+
+                  return Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: dateImage,
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        getDayofWeek(dayName),
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          
+          ],
+        ),
       ),
     );
   }

@@ -16,7 +16,8 @@ class DatabaseHelper {
     {'name': 'ቁሳቁስ', 'machineName': 'am_materials', 'image': 'box'},
     {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'box'},
     {'name': 'ስሜት', 'machineName': 'am_feelings', 'image': 'emotion'},
-    {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'emotion'}
+    {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'emotion'},
+    {'name': 'ንግግር', 'machineName': 'am_quickChat', 'image': 'emotion'}
   ];
   final List<Map<String, String>> listOfEnglishCategories = [
     {'name': 'animals', 'machineName': 'animals', 'image': 'dog'},
@@ -33,8 +34,7 @@ class DatabaseHelper {
     {'name': 'materials', 'machineName': 'materials', 'image': 'box'},
     {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'box'},
     {'name': 'feelings', 'machineName': 'feelings', 'image': 'emotion'},
-        {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
-
+    {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
   ];
 
   factory DatabaseHelper() => _instance;
@@ -170,14 +170,14 @@ class DatabaseHelper {
     return result;
   }
 
-  Future<Object?> getMostActiveDayofTheWeek(String table) async {
+  Future<List<Map>> getMostActiveDayofTheWeek(String table) async {
     var dbClient = await db;
     var result = table == tableProgress
         ? await dbClient!.rawQuery(
-            "SELECT strftime('%w', $columnTimestamp) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgress GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;")
+            "SELECT strftime('%w', $columnTimestamp) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgress GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 3;")
         : await dbClient!.rawQuery(
-            "SELECT strftime('%w', $columnTimestampAm) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgressAm GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 1;");
-    return result.toList().first['day_of_the_week'];
+            "SELECT strftime('%w', $columnTimestampAm) AS day_of_the_week, COUNT(*) as play_count FROM $tableProgressAm GROUP BY day_of_the_week ORDER BY play_count DESC LIMIT 3;");
+    return result;
   }
 
   Future<int> insertCategory(String table, String categoryName) async {
@@ -229,9 +229,9 @@ class DatabaseHelper {
     var dbClient = await db;
     var result = table == tableProgress
         ? await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryName FROM $tableFav WHERE $columnIsFav = 1 ORDER BY $columnFavUpdatedAt DESC LIMIT 4;')
+            'SELECT $columnFavCategoryName, $columnMachineName, $columnIsFav, $columnImage FROM $tableFav WHERE $columnIsFav = 1 ORDER BY $columnFavUpdatedAt DESC LIMIT 4;')
         : await dbClient!.rawQuery(
-            'SELECT $columnFavCategoryNameAm FROM $tableFavAm WHERE $columnIsFavAm = 1 ORDER BY $columnFavUpdatedAtAm DESC LIMIT 4;');
+            'SELECT $columnFavCategoryNameAm, $columnMachineNameAm, $columnIsFavAm, $columnImageAm FROM $tableFavAm WHERE $columnIsFavAm = 1 ORDER BY $columnFavUpdatedAtAm DESC LIMIT 4;');
     ;
 
     return result;
