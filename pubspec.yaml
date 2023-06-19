@@ -67,7 +67,7 @@ flutter:
   assets:
     - image/
     - voice/
-    - assets/images/
+    # - assets/image/
     - assets/sounds/
   fonts:
     - family: Pacifico

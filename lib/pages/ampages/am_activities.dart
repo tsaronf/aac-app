@@ -1,7 +1,13 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:sampleproject/components/lastcard.dart';
+import 'package:sampleproject/components/modifiedrectImageCard.dart.dart';
 
 class am_activities extends StatelessWidget {
+  void playAudio(String assetName) {
+    AssetsAudioPlayer.newPlayer().open(Audio(assetName));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,81 +29,89 @@ class am_activities extends StatelessWidget {
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: <Widget>[
+          //replace sound
           lastcard(
             image: 'image/run.png',
             text: 'መሮጥ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Fall-am.mp3',
           ),
           lastcard(
             image: 'image/wet-floor.png',
             text: 'መዉደቅ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Fall-am.mp3',
           ),
           lastcard(
             image: 'image/breaking.png',
-            text: 'መስበር',
-            // audioFile: 'voice/Black.ogg',
+            text: 'መሰበር',
+            audioFile: 'assets/sounds/Break-am.mp3',
           ),
           lastcard(
             image: 'image/sleep.png',
             text: 'መተኛት',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Sleep-am.mp3',
           ),
           lastcard(
             image: 'image/morning.png',
-            text: 'መንቃት',
-            // audioFile: 'voice/Black.ogg',
+            text: 'መነሳት',
+            audioFile: 'assets/sounds/Get up-am.mp3',
           ),
           lastcard(
             image: 'image/dressing.png',
             text: 'መልበስ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Dress up-am.mp3',
           ),
           lastcard(
             image: 'image/playtime.png',
             text: 'መጫወት',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Play-am.mp3',
           ),
           lastcard(
             image: 'image/triangle.png',
             text: 'መንቀሳቀስ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Move around-am.mp3',
           ),
           lastcard(
             image: 'image/shower.png',
             text: 'ገላ መታጠብ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/washing body-am.mp3',
           ),
+          //replace sound
           lastcard(
             image: 'image/brushing-teeth.png',
             text: 'ጥርስ መቦረሽ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Break-am.mp3',
           ),
           lastcard(
             image: 'image/jump.png',
             text: 'መዝለል',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Jump-am.mp3',
           ),
-          // lastcard(
-          //   image: 'image/open-mouth.png',
-          //   text: 'አፍ',
-          //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-          // ),
-          // lastcard(
-          //   image: 'image/stomach.png',
-          //   text: 'ሆድ',
-          //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-          // ),
-          // lastcard(
-          //   image: 'image/neck.png',
-          //   text: 'አንገት',
-          //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-          // ),
-          // lastcard(
-          //   image: 'image/tongue.png',
-          //   text: 'ምላስ',
-          //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-          // ),
+           lastcard(
+            image: 'image/hold.png',
+            text: 'መያዝ',
+            audioFile: 'assets/sounds/Hold-am.mp3',
+          ),
+            lastcard(
+            image: 'image/came.png',
+            text: 'መምጣት',
+            audioFile: 'assets/sounds/Came-am.mp3',
+          ),
+           lastcard(
+            image: 'image/went.png',
+            text: 'መሄድ',
+            audioFile: 'assets/sounds/Went-am.mp3',
+          ),
+           lastcard(
+            image: 'image/open.png',
+            text: 'መክፈት',
+            audioFile: 'assets/sounds/Open-am.mp3',
+          ),
+          lastcard(
+            image: 'image/close.png',
+            text: 'መዝጋት',
+            audioFile: 'assets/sounds/CLosed-am.mp3',
+          ),
+          
         ],
       ),
     );

@@ -26,87 +26,95 @@ class am_animals extends StatelessWidget {
           lastcard(
             image: 'image/cow.png',
             text: 'ላም',
+            audioFile: 'assets/sounds/Cow-am.mp3',
+
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/dog.png',
             text: 'ዉሻ',
+            audioFile: 'assets/sounds/Dog.mp3',
+
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/cat.png',
             text: 'ድመት',
+            audioFile: 'assets/sounds/Cat-am.mp3',
+
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/mouse.png',
             text: 'አይጥ',
+            audioFile: 'assets/sounds/Cat-am.mp3',
+
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/goat.png',
             text: 'ፍየል',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Goat-am.mp3',
           ),
           lastcard(
             image: 'image/hen.png',
             text: 'ዶሮ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Hen-am.mp3',
           ),
           lastcard(
             image: 'image/sheep.png',
             text: 'በግ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Sheep-am.mp3',
           ),
           lastcard(
             image: 'image/donkey.png',
             text: 'አህያ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Donkey-am.mp3',
           ),
           lastcard(
             image: 'image/horse.png',
             text: 'ፈረስ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Horse-am.mp3',
           ),
           lastcard(
             image: 'image/robin.png',
             text: 'ወፍ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Bird-am.mp3',
           ),
           lastcard(
             image: 'image/hyena.png',
             text: 'ጅብ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Hyena-am.mp3',
           ),
-           lastcard(
+          lastcard(
             image: 'image/butterfly.png',
             text: 'ቢራቢሮ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Butterfly-am.mp3',
           ),
           lastcard(
             image: 'image/lion.png',
             text: 'አንበሳ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Lion-am.mp3',
           ),
           lastcard(
             image: 'image/ox.png',
             text: 'በሬ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Ox-am.mp3',
           ),
           lastcard(
             image: 'image/elephant.png',
             text: 'ዝሆን',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Elephant-am.mp3',
           ),
           lastcard(
             image: 'image/giraffe.png',
             text: 'ቀጭኔ',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Girrafe-am.mp3',
           ),
           lastcard(
             image: 'image/tiger.png',
             text: 'ነብር',
-            // audioFile: 'voice/Black.ogg',
+            audioFile: 'assets/sounds/Tiger-am.mp3',
           ),
         ],
       ),
