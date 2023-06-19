@@ -10,6 +10,9 @@ import 'package:sampleproject/pages/ampages/am_color.dart';
 import 'package:sampleproject/pages/ampages/am_activities.dart';
 import 'package:sampleproject/pages/ampages/am_foods.dart';
 import 'package:sampleproject/pages/ampages/am_quickChat.dart';
+import 'package:sampleproject/pages/ampages/am_family.dart';
+import 'package:sampleproject/pages/ampages/am_cloths.dart';
+import 'package:sampleproject/pages/ampages/am_materials.dart';
 
 // import 'package:sampleproject/pages/animation.dart';
 import 'package:sampleproject/components/bottomNavCard.dart';
@@ -72,19 +75,25 @@ class _homePageState extends State<homePage> {
     // Map the provided widget name to the actual widget class
     switch (pageName) {
       case 'am_animals':
-      // return am_animals();
+        return am_animals();
       case 'am_activities':
         return am_activities();
       case 'am_bodyparts':
-      // return am_bodyparts();
+        return am_bodyparts();
       case 'am_color':
-      // return am_color();
+        return am_color();
       case 'am_feelings':
-      // return am_feelings();
+        return am_feelings();
       case 'am_foods':
-      // return am_foods();
+        return am_foods();
+      case 'am_family':
+        return am_family();
       case 'am_quickChat':
         return am_quickChat();
+      case 'am_cloths':
+        return am_cloths();
+      case 'am_materials':
+        return am_materials();
       // Add more cases for each page you want to navigate to
       default:
         return Container();
