@@ -58,7 +58,7 @@ class am_activities extends StatelessWidget {
           lastcard(
             image: 'image/dressing.png',
             text: 'መልበስ',
-            audioFile: 'assets/sounds/Dress up-am.mp3',
+            audioFile: 'assets/sounds/Wear cloth-am.mp3',
           ),
           lastcard(
             image: 'image/playtime.png',
@@ -68,12 +68,12 @@ class am_activities extends StatelessWidget {
           lastcard(
             image: 'image/triangle.png',
             text: 'መንቀሳቀስ',
-            audioFile: 'assets/sounds/Move around-am.mp3',
+            audioFile: 'assets/sounds/MoveAround-am.mp3',
           ),
           lastcard(
             image: 'image/shower.png',
             text: 'ገላ መታጠብ',
-            audioFile: 'assets/sounds/washing body-am.mp3',
+            audioFile: 'assets/sounds/washingbody-am.mp3',
           ),
           //replace sound
           lastcard(
@@ -86,22 +86,22 @@ class am_activities extends StatelessWidget {
             text: 'መዝለል',
             audioFile: 'assets/sounds/Jump-am.mp3',
           ),
-           lastcard(
+          lastcard(
             image: 'image/hold.png',
             text: 'መያዝ',
             audioFile: 'assets/sounds/Hold-am.mp3',
           ),
-            lastcard(
+          lastcard(
             image: 'image/came.png',
             text: 'መምጣት',
             audioFile: 'assets/sounds/Came-am.mp3',
           ),
-           lastcard(
+          lastcard(
             image: 'image/went.png',
             text: 'መሄድ',
             audioFile: 'assets/sounds/Went-am.mp3',
           ),
-           lastcard(
+          lastcard(
             image: 'image/open.png',
             text: 'መክፈት',
             audioFile: 'assets/sounds/Open-am.mp3',
@@ -111,7 +111,6 @@ class am_activities extends StatelessWidget {
             text: 'መዝጋት',
             audioFile: 'assets/sounds/CLosed-am.mp3',
           ),
-          
         ],
       ),
     );

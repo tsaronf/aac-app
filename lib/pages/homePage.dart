@@ -13,6 +13,7 @@ import 'package:sampleproject/pages/ampages/am_quickChat.dart';
 import 'package:sampleproject/pages/ampages/am_family.dart';
 import 'package:sampleproject/pages/ampages/am_cloths.dart';
 import 'package:sampleproject/pages/ampages/am_materials.dart';
+import 'package:sampleproject/pages/ampages/am_game_homepage.dart';
 
 // import 'package:sampleproject/pages/animation.dart';
 import 'package:sampleproject/components/bottomNavCard.dart';
@@ -155,7 +156,14 @@ class _homePageState extends State<homePage> {
               Icons.games_outlined,
               size: 30.0,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => am_game_homepage(),
+                ),
+              );
+            },
             // Handle fourth button press
           ),
         ],

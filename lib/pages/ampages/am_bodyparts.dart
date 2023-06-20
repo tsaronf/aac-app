@@ -96,7 +96,7 @@ class am_bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/tongue.png',
             text: 'ምላስ',
-            audioFile: 'assets/sounds/Tongue-am.mp3',
+            audioFile: 'assets/sounds/tongue-am.mp3',
           ),
           lastcard(
             image: 'image/hair.png',

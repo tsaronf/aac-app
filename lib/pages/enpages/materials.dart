@@ -24,7 +24,7 @@ class materials extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/cup.png',
+            image: 'image/coffee.png',
             text: 'Cup',
             audioFile: 'assets/sounds/cup.mp3',
 
@@ -110,12 +110,12 @@ class materials extends StatelessWidget {
           lastcard(
             image: 'image/toothbrush.png',
             text: 'Toothbrush',
-            audioFile: 'assets/sounds/Tooth brush.mp3',
+            audioFile: 'assets/sounds/tooth brush.mp3',
           ),
           lastcard(
             image: 'image/toys.png',
             text: 'Toys',
-            audioFile: 'assets/sounds/Thing thing.mp3',
+            audioFile: 'assets/sounds/toys.mp3',
           ),
           lastcard(
             image: 'image/pencil.png',
