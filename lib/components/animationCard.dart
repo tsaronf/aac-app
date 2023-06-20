@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class animationCard extends StatelessWidget {
-  animationCard({
+class AnimationCard extends StatelessWidget {
+  AnimationCard({
     required this.image,
     required this.text,
   });
 
-  //final String audioFile;
   final String image;
   final String text;
 
@@ -18,32 +17,41 @@ class animationCard extends StatelessWidget {
       },
       child: Padding(
         padding: const EdgeInsets.all(5.0),
-        child: Container(
-          decoration: BoxDecoration(
+        child: Card(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(13),
           ),
-          child: Card(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Image(
-                image: AssetImage(image),
-                fit: BoxFit.scaleDown,
-                height: 300.0,
-                width: 300.0,
-              ),
-              SizedBox(height: 6),
-              Text(
-                text,
-                style: TextStyle(
-                  fontFamily: 'Pacifico',
-                  fontWeight: FontWeight.normal,
-                  fontSize: 25.0,
-                  color: Colors.black,
+              Container(
+                height: 200.0, // Adjust the height as needed
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(13),
+                    topRight: Radius.circular(13),
+                  ),
+                  child: Image(
+                    image: AssetImage(image),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.normal,
+                    fontSize: 25.0,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
             ],
-          )),
+          ),
         ),
       ),
     );

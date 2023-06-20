@@ -1,105 +1,118 @@
-// import 'package:flutter/material.dart';
-// import 'package:sampleproject/components/lastcard.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:flutter/material.dart';
+import 'package:sampleproject/components/lastcard.dart';
+import 'package:sampleproject/components/modifiedrectImageCard.dart.dart';
 
-// class activities extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Colors.purple,
-//         title: Text(
-//           "ድርጊት",
-//           style: TextStyle(
-//             fontFamily: 'Source Sans Pro',
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//         centerTitle: true,
-//       ),
-//       backgroundColor: Color(0xFFF3F3F3),
-//       body: GridView.count(
-//         crossAxisCount: 2,
-//         padding: EdgeInsets.all(5),
-//         crossAxisSpacing: 5,
-//         mainAxisSpacing: 5,
-//         children: <Widget>[
-//           lastcard(
-//             image: 'image/run.png',
-//             text: 'Running',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/wet-floor.png',
-//             text: 'Falling',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/breaking.png',
-//             text: 'breaking',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/sleep.png',
-//             text: 'Sleeping',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/morning.png',
-//             text: 'Waking up',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/dressing.png',
-//             text: 'Dressing',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/playtime.png',
-//             text: 'Playing',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/triangle.png',
-//             text: 'Sport',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/shower.png',
-//             text: 'Taking bath',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/brushing-teeth.png',
-//             text: 'Brushing teeth',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           lastcard(
-//             image: 'image/jump.png',
-//             text: 'Jumping',
-//             // audioFile: 'voice/Black.ogg',
-//           ),
-//           // lastcard(
-//           //   image: 'image/open-mouth.png',
-//           //   text: 'አፍ',
-//           //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-//           // ),
-//           // lastcard(
-//           //   image: 'image/stomach.png',
-//           //   text: 'ሆድ',
-//           //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-//           // ),
-//           // lastcard(
-//           //   image: 'image/neck.png',
-//           //   text: 'አንገት',
-//           //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-//           // ),
-//           // lastcard(
-//           //   image: 'image/tongue.png',
-//           //   text: '',
-//           //   // audioFile: 'assets/sounds/enGreetings01.mp3',
-//           // ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+class activities extends StatelessWidget {
+  void playAudio(String assetName) {
+    AssetsAudioPlayer.newPlayer().open(Audio(assetName));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text(
+          "Activities",
+          style: TextStyle(
+            fontFamily: 'Source Sans Pro',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      backgroundColor: Color(0xFFF3F3F3),
+      body: GridView.count(
+        crossAxisCount: 2,
+        padding: EdgeInsets.all(5),
+        crossAxisSpacing: 5,
+        mainAxisSpacing: 5,
+        children: <Widget>[
+          //replace sound
+          lastcard(
+            image: 'image/run.png',
+            text: 'Run',
+            audioFile: 'assets/sounds/falling.mp3',
+          ),
+          lastcard(
+            image: 'image/wet-floor.png',
+            text: 'Falling',
+            audioFile: 'assets/sounds/falling.mp3',
+          ),
+          lastcard(
+            image: 'image/breaking.png',
+            text: 'Breaking',
+            audioFile: 'assets/sounds/breaking.mp3',
+          ),
+          lastcard(
+            image: 'image/sleep.png',
+            text: 'Sleeping',
+            audioFile: 'assets/sounds/Sleeping.mp3',
+          ),
+          lastcard(
+            image: 'image/morning.png',
+            text: 'waking up',
+            audioFile: 'assets/sounds/Get up-am.mp3',
+          ),
+          lastcard(
+            image: 'image/dressing.png',
+            text: 'wearing cloth',
+            audioFile: 'assets/sounds/Dress up-am.mp3',
+          ),
+          lastcard(
+            image: 'image/playtime.png',
+            text: 'playing',
+            audioFile: 'assets/sounds/Play-am.mp3',
+          ),
+          lastcard(
+            image: 'image/triangle.png',
+            text: 'Moving',
+            audioFile: 'assets/sounds/Moving.mp3',
+          ),
+          lastcard(
+            image: 'image/shower.png',
+            text: 'Shower',
+            audioFile: 'assets/sounds/washing body.mp3',
+          ),
+          //replace sound
+          lastcard(
+            image: 'image/brushing-teeth.png',
+            text: 'Brushing Teeth',
+            audioFile: 'assets/sounds/brushing teeth.mp3',
+          ),
+          lastcard(
+            image: 'image/jump.png',
+            text: 'Jumping',
+            audioFile: 'assets/sounds/Jumping.mp3',
+          ),
+          lastcard(
+            image: 'image/hold.png',
+            text: 'Holding',
+            audioFile: 'assets/sounds/holding.mp3',
+          ),
+          lastcard(
+            image: 'image/came.png',
+            text: 'Coming',
+            audioFile: 'assets/sounds/Coming.mp3',
+          ),
+          lastcard(
+            image: 'image/went.png',
+            text: 'To go',
+            audioFile: 'assets/sounds/going.mp3',
+          ),
+          lastcard(
+            image: 'image/open.png',
+            text: 'To open',
+            audioFile: 'assets/sounds/Opening.mp3',
+          ),
+          lastcard(
+            image: 'image/close.png',
+            text: 'To close',
+            audioFile: 'assets/sounds/Closing.mp3',
+          ),
+        ],
+      ),
+    );
+  }
+}
