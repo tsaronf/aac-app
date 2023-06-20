@@ -35,6 +35,7 @@ class DatabaseHelper {
     {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'box'},
     {'name': 'feelings', 'machineName': 'feelings', 'image': 'emotion'},
     {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
+    {'name': 'Quick Chat', 'machineName': 'quickChat', 'image': 'emotion'}
   ];
 
   factory DatabaseHelper() => _instance;

@@ -23,16 +23,16 @@ class animation extends StatelessWidget {
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: <Widget>[
-          animationCard(
+          AnimationCard(
             image: 'image/run.gif',
             text: 'መሮጥ',
           ),
-          animationCard(
+          AnimationCard(
             image: 'image/come.gif',
             text: 'መዉደቅ',
             // audioFile: 'assets/sounds/enGreetings01.mp3',
           ),
-          animationCard(
+          AnimationCard(
             image: 'image/Brushing teeth.gif',
             text: 'መስበር',
             // audioFile: 'assets/sounds/enGreetings01.mp3',

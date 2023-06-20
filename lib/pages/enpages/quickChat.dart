@@ -19,40 +19,63 @@ class quickChat extends StatelessWidget {
       backgroundColor: Color(0xFFF3F3F3),
       body: ListView(
         children: <Widget>[
-          animationCard(
-            image: 'assets/images/enGreetings01.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/yes.webp',
+            text: 'Yes',
 
             // audioFile: 'assets/sounds/enGreetings01.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings02.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/no.webp',
+            text: 'No',
 
             // audioFile: 'assets/sounds/enGreetings02.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings03.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/toilet.webp',
+            text: 'Toilet',
 
             // audioFile: 'assets/sounds/enGreetings03.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings04.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/sick.webp',
+            text: 'I am sick',
 
             // audioFile: 'assets/sounds/enGreetings04.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings05.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/notwant.webp',
+            text: 'I dont want it',
 
             // audioFile: 'assets/sounds/enGreetings05.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings06.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/morning.webp',
+            text: 'Good morning',
 
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/night.webp',
+            text: 'Good evening',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/good night.webp',
+            text: 'Good night',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/sorry.webp',
+            text: 'Sorry',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/thank you.webp',
+            text: 'Thank you',
             // audioFile: 'assets/sounds/enGreetings06.mp3',
           ),
         ],

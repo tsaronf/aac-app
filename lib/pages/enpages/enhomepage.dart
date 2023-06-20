@@ -5,8 +5,10 @@ import 'package:sampleproject/components/favCard.dart';
 import 'package:sampleproject/pages/ampages/am_QuickChat.dart';
 import 'package:sampleproject/pages/ampages/am_animals.dart';
 import 'package:sampleproject/pages/enpages/animals.dart';
+import 'package:sampleproject/pages/enpages/cloths.dart';
 import 'package:sampleproject/pages/enpages/enoptions.dart';
 import 'package:sampleproject/pages/enpages/bodyparts.dart';
+import 'package:sampleproject/pages/enpages/family.dart';
 import 'package:sampleproject/pages/enpages/feelings.dart';
 import 'package:sampleproject/pages/enpages/foods.dart';
 
@@ -15,6 +17,7 @@ import 'package:sampleproject/pages/enpages/activities.dart';
 // import 'package:sampleproject/pages/animation.dart';
 import 'package:sampleproject/components/bottomNavCard.dart';
 import 'package:sampleproject/database_helper.dart';
+import 'package:sampleproject/pages/enpages/materials.dart';
 import 'package:sampleproject/pages/enpages/quickChat.dart';
 
 class enhomePage extends StatefulWidget {
@@ -73,17 +76,25 @@ class _enhomePageState extends State<enhomePage> {
     // Map the provided widget name to the actual widget class
     switch (pageName) {
       case 'animals':
-        // return animals();
+        return animals();
       case 'activities':
-        // return activities();
+        return activities();
       case 'bodyparts':
-        // return bodyparts();
+        return bodyparts();
       case 'color':
-        // return color();
+        return color();
+      case 'family':
+        return family();
       case 'feelings':
-        // return feelings();
+        return feelings();
       case 'foods':
-        // return foods();
+        return foods();
+      case 'materials':
+        return materials();
+      case 'cloths':
+        return cloths();
+      case 'quickChat':
+        return quickChat();
       // Add more cases for each page you want to navigate to
       default:
         return Container();
@@ -194,27 +205,26 @@ class _enhomePageState extends State<enhomePage> {
                             return Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Container(
-                                  width:
-                                      150, // Adjust the width as per your requirement
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                  // color: Color.fromARGB(255, 222, 92, 92),
-                                  child: 
-                                  // change based on lanaguage
-                                  FavCard(
-                                      page: _getPageByName(
-                                          favCategories[index]
-                                              ['machineName']),
-                                      image: favCategories[index]['image'],
-                                      text: favCategories[index]
-                                          ['favCategoryName'],
-                                      machineName: favCategories[index]
-                                          ['machineName'],
-                                      progressCallback: registerProgress,
-                                      playAudioCallback: playAudio),
-
-                                  ),
+                                width:
+                                    150, // Adjust the width as per your requirement
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(3),
+                                ),
+                                // color: Color.fromARGB(255, 222, 92, 92),
+                                child:
+                                    // change based on lanaguage
+                                    FavCard(
+                                        page: _getPageByName(
+                                            favCategories[index]
+                                                ['machineName']),
+                                        image: favCategories[index]['image'],
+                                        text: favCategories[index]
+                                            ['favCategoryName'],
+                                        machineName: favCategories[index]
+                                            ['machineName'],
+                                        progressCallback: registerProgress,
+                                        playAudioCallback: playAudio),
+                              ),
                             );
                           }
                         })
@@ -251,8 +261,8 @@ class _enhomePageState extends State<enhomePage> {
             // ),
 
             // Card outside GridView
-        // SizedBox(height: 2),
-             Padding(
+            // SizedBox(height: 2),
+            Padding(
               padding: EdgeInsets.all(6.0),
               child: GestureDetector(
                 onTap: () {
@@ -319,8 +329,6 @@ class _enhomePageState extends State<enhomePage> {
                 ),
               ),
             ),
-
-     
           ],
         ),
       ),

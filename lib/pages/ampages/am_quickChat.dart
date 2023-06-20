@@ -19,40 +19,63 @@ class am_quickChat extends StatelessWidget {
       backgroundColor: Color(0xFFF3F3F3),
       body: ListView(
         children: <Widget>[
-          animationCard(
-            image: 'assets/images/enGreetings01.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/yes.webp',
+            text: 'አዎ',
 
             // audioFile: 'assets/sounds/enGreetings01.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings02.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/no.webp',
+            text: 'አይ',
 
             // audioFile: 'assets/sounds/enGreetings02.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings03.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/toilet.webp',
+            text: 'ሽንት ቤት',
 
             // audioFile: 'assets/sounds/enGreetings03.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings04.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/sick.webp',
+            text: 'አሞኛል',
 
             // audioFile: 'assets/sounds/enGreetings04.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings05.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/notwant.webp',
+            text: 'አልፋልግም',
 
             // audioFile: 'assets/sounds/enGreetings05.mp3',
           ),
-          animationCard(
-            image: 'assets/images/enGreetings06.png',
-            text: 'መሮጥ',
+          AnimationCard(
+            image: 'image/morning.webp',
+            text: 'እንደምን አደራቹ',
 
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/night.webp',
+            text: 'እንደምን አመሻቹ',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/good night.webp',
+            text: 'ደና ደሩ',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/sorry.webp',
+            text: 'ይቅርታ',
+
+            // audioFile: 'assets/sounds/enGreetings06.mp3',
+          ),
+          AnimationCard(
+            image: 'image/thank you.webp',
+            text: 'አመሰናለሁ',
             // audioFile: 'assets/sounds/enGreetings06.mp3',
           ),
         ],
