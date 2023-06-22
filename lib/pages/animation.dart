@@ -26,15 +26,20 @@ class animation extends StatelessWidget {
           AnimationCard(
             image: 'image/run.gif',
             text: 'መሮጥ',
+            audioFile: 'assets/sounds/apple-am.mp3',
           ),
           AnimationCard(
             image: 'image/come.gif',
             text: 'መዉደቅ',
+            audioFile: 'assets/sounds/apple-am.mp3',
+
             // audioFile: 'assets/sounds/enGreetings01.mp3',
           ),
           AnimationCard(
             image: 'image/Brushing teeth.gif',
             text: 'መስበር',
+            audioFile: 'assets/sounds/apple-am.mp3',
+
             // audioFile: 'assets/sounds/enGreetings01.mp3',
           ),
           // lastcard(

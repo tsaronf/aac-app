@@ -14,7 +14,7 @@ class DatabaseHelper {
     {'name': 'ቀለማት', 'machineName': 'am_color', 'image': 'colour'},
     {'name': 'ትዕዛዛት', 'machineName': 'am_instructions', 'image': 'box'},
     {'name': 'ቁሳቁስ', 'machineName': 'am_materials', 'image': 'box'},
-    {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'box'},
+    {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'reference'},
     {'name': 'ስሜት', 'machineName': 'am_feelings', 'image': 'emotion'},
     {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'emotion'},
     {'name': 'ንግግር', 'machineName': 'am_quickChat', 'image': 'emotion'}
@@ -32,7 +32,7 @@ class DatabaseHelper {
     {'name': 'color', 'machineName': 'color', 'image': 'colour'},
     {'name': 'instructions', 'machineName': 'instructions', 'image': 'box'},
     {'name': 'materials', 'machineName': 'materials', 'image': 'box'},
-    {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'box'},
+    {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'reference'},
     {'name': 'feelings', 'machineName': 'feelings', 'image': 'emotion'},
     {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
     {'name': 'Quick Chat', 'machineName': 'quickChat', 'image': 'emotion'}

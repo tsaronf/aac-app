@@ -51,7 +51,7 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/chest.png',
             text: 'Chest',
-            audioFile: 'assets/sounds/Chest.mp3',
+            audioFile: 'assets/sounds/chest.mp3',
           ),
           lastcard(
             image: 'image/ear.png',
@@ -81,12 +81,12 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/open-mouth.png',
             text: 'Mouth',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/mouth.mp3',
           ),
           lastcard(
             image: 'image/stomach.png',
             text: 'Stomach',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/stomach.mp3',
           ),
           lastcard(
             image: 'image/neck.png',
@@ -106,7 +106,7 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/head.png',
             text: 'Head',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/head.mp3',
           ),
         ],
       ),

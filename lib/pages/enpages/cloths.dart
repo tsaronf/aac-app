@@ -61,7 +61,7 @@ class cloths extends StatelessWidget {
           lastcard(
             image: 'image/Shirtv.png',
             text: 'Shirt',
-            audioFile: 'assets/sounds/T-shirt.mp3',
+            audioFile: 'assets/sounds/shirt.mp3',
           ),
           lastcard(
             image: 'image/dress.png',

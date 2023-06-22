@@ -24,7 +24,7 @@ class am_materials extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/cup.png',
+            image: 'image/coffee.png',
             text: 'ኩባያ',
             audioFile: 'assets/sounds/Cup-am.mp3',
 
@@ -40,7 +40,7 @@ class am_materials extends StatelessWidget {
           lastcard(
             image: 'image/tv-app.png',
             text: 'ቲቪ',
-            audioFile: 'assets/sounds/TV-am.mp3',
+            audioFile: 'assets/sounds/tv-am.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
@@ -80,7 +80,7 @@ class am_materials extends StatelessWidget {
           lastcard(
             image: 'image/cabinet.png',
             text: 'ኮመዲኖ',
-            audioFile: 'assets/sounds/Table-am.mp3',
+            audioFile: 'assets/sounds/cabinet-am.mp3',
           ),
           lastcard(
             image: 'image/table.png',

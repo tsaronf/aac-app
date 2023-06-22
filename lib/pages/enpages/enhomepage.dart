@@ -17,6 +17,7 @@ import 'package:sampleproject/pages/enpages/activities.dart';
 // import 'package:sampleproject/pages/animation.dart';
 import 'package:sampleproject/components/bottomNavCard.dart';
 import 'package:sampleproject/database_helper.dart';
+import 'package:sampleproject/pages/enpages/illustrations.dart';
 import 'package:sampleproject/pages/enpages/materials.dart';
 import 'package:sampleproject/pages/enpages/quickChat.dart';
 
@@ -95,6 +96,8 @@ class _enhomePageState extends State<enhomePage> {
         return cloths();
       case 'quickChat':
         return quickChat();
+      case 'illustrations':
+        return illustrations();
       // Add more cases for each page you want to navigate to
       default:
         return Container();

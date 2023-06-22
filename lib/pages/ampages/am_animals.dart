@@ -47,7 +47,7 @@ class am_animals extends StatelessWidget {
           lastcard(
             image: 'image/mouse.png',
             text: 'አይጥ',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/rat-am.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),

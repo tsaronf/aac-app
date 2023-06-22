@@ -33,14 +33,14 @@ class materials extends StatelessWidget {
           lastcard(
             image: 'image/potty.png',
             text: 'Potty',
-            audioFile: 'assets/sounds/Potty trainer.mp3',
+            audioFile: 'assets/sounds/potty.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/tv-app.png',
             text: 'TV',
-            audioFile: 'assets/sounds/TV-am.mp3',
+            audioFile: 'assets/sounds/tv.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
@@ -75,12 +75,12 @@ class materials extends StatelessWidget {
           lastcard(
             image: 'image/doll.png',
             text: 'Doll',
-            audioFile: 'assets/sounds/Doll-am.mp3',
+            audioFile: 'assets/sounds/doll.mp3',
           ),
           lastcard(
             image: 'image/cabinet.png',
             text: 'Cabinate',
-            audioFile: 'assets/sounds/Table-am.mp3',
+            audioFile: 'assets/sounds/cabinet.mp3',
           ),
           lastcard(
             image: 'image/table.png',

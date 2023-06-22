@@ -46,7 +46,7 @@ class foods extends StatelessWidget {
           lastcard(
             image: 'image/cabbage.png',
             text: 'Cabbage',
-            audioFile: 'assets/sounds/Collard-am.mp3',
+            audioFile: 'assets/sounds/cabbage.mp3',
           ),
           lastcard(
             image: 'image/carrot.png',
@@ -136,7 +136,7 @@ class foods extends StatelessWidget {
           lastcard(
             image: 'image/watermelon.png',
             text: 'Watermelon',
-            audioFile: 'assets/sounds/watermelon-am.mp3',
+            audioFile: 'assets/sounds/watermelon.mp3',
           ),
         ],
       ),

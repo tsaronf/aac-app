@@ -61,12 +61,12 @@ class am_cloths extends StatelessWidget {
           lastcard(
             image: 'image/Shirtv.png',
             text: 'ሸሚዝ',
-            audioFile: 'assets/sounds/T-shirt-am.mp3',
+            audioFile: 'assets/sounds/shirt-am.mp3',
           ),
           lastcard(
             image: 'image/dress.png',
             text: 'ቀሚስ',
-            audioFile: 'assets/sounds/Dress-am.mp3',
+            audioFile: 'assets/sounds/dress-am.mp3',
           ),
         ],
       ),

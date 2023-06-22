@@ -13,6 +13,8 @@ import 'package:sampleproject/pages/ampages/am_quickChat.dart';
 import 'package:sampleproject/pages/ampages/am_family.dart';
 import 'package:sampleproject/pages/ampages/am_cloths.dart';
 import 'package:sampleproject/pages/ampages/am_materials.dart';
+import 'package:sampleproject/pages/ampages/am_illustrations.dart';
+
 import 'package:sampleproject/pages/ampages/am_game_homepage.dart';
 
 // import 'package:sampleproject/pages/animation.dart';
@@ -95,6 +97,8 @@ class _homePageState extends State<homePage> {
         return am_cloths();
       case 'am_materials':
         return am_materials();
+      case 'am_illustrations':
+        return am_illustrations();
       // Add more cases for each page you want to navigate to
       default:
         return Container();
