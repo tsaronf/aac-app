@@ -2,7 +2,7 @@ import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sampleproject/components/favCard.dart';
-import 'package:sampleproject/pages/ampages/am_QuickChat.dart';
+import 'package:sampleproject/pages/ampages/am_quickChat.dart';
 import 'package:sampleproject/pages/ampages/am_animals.dart';
 import 'package:sampleproject/pages/enpages/animals.dart';
 import 'package:sampleproject/pages/enpages/cloths.dart';

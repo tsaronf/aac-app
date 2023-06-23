@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sampleproject/pages/enpages/enhomePage.dart'; //temporary
-import 'package:sampleproject/pages/homepage.dart';
+import 'package:sampleproject/pages/enpages/enhomepage.dart'; //temporary
+import 'package:sampleproject/pages/homePage.dart';
 
 class languagepage extends StatelessWidget {
   @override
