@@ -152,7 +152,7 @@ class _homePageState extends State<homePage> {
             );
           },
         ),
-        title: Text("AAC"),
+        title: Text("ልሣን"),
         centerTitle: true,
         actions: [
           IconButton(
@@ -178,7 +178,7 @@ class _homePageState extends State<homePage> {
             Padding(
               padding: EdgeInsets.all(16.0),
               child: Container(
-                height: 380,
+                height: 350,
                 width: 380,
                 child: favCategories.length > 0
                     ? GridView.builder(
@@ -232,8 +232,8 @@ class _homePageState extends State<homePage> {
                           child: Center(
                             //change language and text
                             child: Text(
-                              'Additional Card',
-                              style: TextStyle(fontSize: 18.0),
+                              'ተወዳጆችዎን ያክሉ',
+                              style: TextStyle(fontSize: 38.0),
                             ),
                           ),
                         ),
@@ -289,7 +289,7 @@ class _homePageState extends State<homePage> {
                           'ንግግር',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 40.0,
+                            fontSize: 60.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

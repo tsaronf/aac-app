@@ -25,102 +25,101 @@ class illustrations extends StatelessWidget {
         children: <Widget>[
           lastcard(
             image: 'image/a book.png',
-            text: 'መጽሐፍ',
+            text: 'A book',
             audioFile: 'assets/sounds/a book.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/book-stack.png',
-            text: 'መጻሕፍት',
+            text: 'Books',
             audioFile: 'assets/sounds/many books.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/big house.png',
-            text: 'ትልቅ',
-            audioFile: 'assets/sounds/big.mp3',
+            text: 'Big house',
+            audioFile: 'assets/sounds/big house.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/small house.png',
-            text: 'ትንሽ',
-            audioFile: 'assets/sounds/small.mp3',
+            text: 'Small house',
+            audioFile: 'assets/sounds/small house.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
-
           lastcard(
             image: 'image/clean cloth.png',
-            text: 'ንጹህ ልብስ',
+            text: 'Clean cloth',
             audioFile: 'assets/sounds/clean cloth.mp3',
           ),
           lastcard(
             image: 'image/dirty clothes.png',
-            text: 'ቆሻሻ ልብስ',
+            text: 'Dirty cloth',
             audioFile: 'assets/sounds/dirty cloth.mp3',
           ),
           lastcard(
             image: 'image/cold milk .png',
-            text: 'ቀዝቃዛ ወተት',
+            text: 'cold milk',
             audioFile: 'assets/sounds/cold milk.mp3',
           ),
           lastcard(
             image: 'image/hot milk.png',
-            text: 'ትኩስ ወተት',
+            text: 'Hot milk',
             audioFile: 'assets/sounds/hot milk.mp3',
           ),
           lastcard(
             image: 'image/empty-box.png',
-            text: 'ባዶ ሳጥን',
+            text: 'Empty box',
             audioFile: 'assets/sounds/empty box.mp3',
           ),
           lastcard(
             image: 'image/full box.png',
-            text: 'ሙሉ ሳጥን',
+            text: 'Full box',
             audioFile: 'assets/sounds/full box.mp3',
           ),
           lastcard(
             image: 'image/love.png',
-            text: 'እወድሻለሁ',
+            text: 'I love you',
             audioFile: 'assets/sounds/I love you.mp3',
           ),
           lastcard(
             image: 'image/love.png',
-            text: 'እወድሃለሁ',
-            audioFile: 'assets/sounds/i love you.mp3',
+            text: 'I love you',
+            audioFile: 'assets/sounds/I love you.mp3',
           ),
           lastcard(
             image: 'image/teenager.png',
-            text: 'ወጣት',
+            text: 'Young',
             audioFile: 'assets/sounds/young.mp3',
           ),
           lastcard(
             image: 'image/old.png',
-            text: 'ሽማግሌ',
+            text: 'Old',
             audioFile: 'assets/sounds/old.mp3',
           ),
           lastcard(
             image: 'image/red ball.png',
-            text: 'ቀይ ኳስ ',
+            text: 'Red ball ',
             audioFile: 'assets/sounds/red ball.mp3',
           ),
           lastcard(
             image: 'image/yellow ball.png',
-            text: 'ቢጫ ኳስ',
+            text: 'Yellow ball',
             audioFile: 'assets/sounds/yellow ball.mp3',
           ),
           lastcard(
             image: 'image/open door.png',
-            text: 'መክፈት',
-            audioFile: 'assets/sounds/open.mp3',
+            text: 'Opened door',
+            audioFile: 'assets/sounds/open door.mp3',
           ),
           lastcard(
             image: 'image/closed door.png',
-            text: 'መዝጋት',
-            audioFile: 'assets/sounds/close.mp3',
+            text: 'Closed door',
+            audioFile: 'assets/sounds/close door.mp3',
           ),
         ],
       ),

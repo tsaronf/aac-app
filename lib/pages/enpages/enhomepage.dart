@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:sampleproject/components/favCard.dart';
 import 'package:sampleproject/pages/ampages/am_QuickChat.dart';
 import 'package:sampleproject/pages/ampages/am_animals.dart';
+import 'package:sampleproject/pages/ampages/am_firstgamescreen.dart';
 import 'package:sampleproject/pages/enpages/animals.dart';
 import 'package:sampleproject/pages/enpages/cloths.dart';
 import 'package:sampleproject/pages/enpages/enoptions.dart';
@@ -109,7 +110,7 @@ class _enhomePageState extends State<enhomePage> {
     return Scaffold(
       bottomNavigationBar: Container(
         // padding: EdgeInsets.all(16),
-        height: 200, // Adjust the height as per your requirement
+        height: 180, // Adjust the height as per your requirement
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: categoryList.map((item) {
@@ -151,7 +152,7 @@ class _enhomePageState extends State<enhomePage> {
             );
           },
         ),
-        title: Text("AAC"),
+        title: Text("LISAN"),
         centerTitle: true,
         actions: [
           IconButton(
@@ -159,7 +160,14 @@ class _enhomePageState extends State<enhomePage> {
               Icons.games_outlined,
               size: 30.0,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FirstGameScreen(),
+                ),
+              );
+            },
             // Handle fourth button press
           ),
         ],
@@ -187,7 +195,7 @@ class _enhomePageState extends State<enhomePage> {
           children: [
             // Fav List TODO
             Padding(
-              padding: EdgeInsets.all(16.0), // Add padding around the GridView
+              padding: EdgeInsets.all(10.0), // Add padding around the GridView
               child: Container(
                 height: 380,
                 width: 380,
@@ -198,7 +206,7 @@ class _enhomePageState extends State<enhomePage> {
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8.0,
-                          mainAxisSpacing: 8.0,
+                          mainAxisSpacing: 15.0,
                           childAspectRatio: 1.0,
                         ),
                         itemCount: favCategories.length,
@@ -209,7 +217,7 @@ class _enhomePageState extends State<enhomePage> {
                               padding: EdgeInsets.all(8.0),
                               child: Container(
                                 width:
-                                    150, // Adjust the width as per your requirement
+                                    500.0, // Adjust the width as per your requirement
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                 ),
@@ -243,8 +251,11 @@ class _enhomePageState extends State<enhomePage> {
                           child: Center(
                             //change language and text
                             child: Text(
-                              'Additional Card',
-                              style: TextStyle(fontSize: 18.0),
+                              'Add Your Favorites',
+                              style: TextStyle(
+                                  fontFamily: 'S S P',
+                                  fontSize: 34,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -265,65 +276,53 @@ class _enhomePageState extends State<enhomePage> {
 
             // Card outside GridView
             // SizedBox(height: 2),
-            Padding(
+                 Padding(
               padding: EdgeInsets.all(6.0),
-              child: GestureDetector(
-                onTap: () {
-                  // Perform navigation to the desired page
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          quickChat(), // Replace with the desired page widget
+              child: Container(
+                height: 150,
+                width: 380,
+                // decoration: BoxDecoration(
+                //   color: Colors.blue,
+                //   borderRadius: BorderRadius.circular(20.0),
+                // ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Add your navigation logic here
+                    // For example, you can use Navigator.push to navigate to another page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => quickChat()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0.0),
                     ),
-                  );
-                },
-                child: Container(
-                  height: 150,
-                  width: 380,
-                  // decoration: BoxDecoration(
-                  //   color: Colors.blue,
-                  //   borderRadius: BorderRadius.circular(20.0),
-                  // ),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Add your navigation logic here
-                      // For example, you can use Navigator.push to navigate to another page
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => quickChat()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(0.0),
+                    elevation: 10.0,
+                    padding: EdgeInsets.all(0),
+                    primary: Colors.transparent,
+                  ),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 250, 250, 251),
+                          Color.fromRGBO(245, 247, 245, 1)
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
-                      elevation: 10.0,
-                      padding: EdgeInsets.all(0),
-                      primary: Colors.transparent,
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Ink(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 250, 250, 251),
-                            Color.fromRGBO(245, 247, 245, 1)
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Center(
-                          child: Text(
-                            'Quick Chat',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 40.0,
-                              fontWeight: FontWeight.bold,
-                            ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(5.0),
+                      child: Center(
+                        child: Text(
+                          'Quick Chat',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 60.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -332,6 +331,76 @@ class _enhomePageState extends State<enhomePage> {
                 ),
               ),
             ),
+
+            // Padding(
+            //   padding: EdgeInsets.all(6.0),
+            //   child: GestureDetector(
+            //     onTap: () {
+            //       // Perform navigation to the desired page
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) =>
+            //               quickChat(), // Replace with the desired page widget
+            //         ),
+            //       );
+            //     },
+            //     child: Container(
+            //       height: 80,
+            //       width: 380,
+            //       // decoration: BoxDecoration(
+            //       //   color: Colors.blue,
+            //       //   borderRadius: BorderRadius.circular(20.0),
+            //       // ),
+            //       child: ElevatedButton(
+            //         onPressed: () {
+            //           // Add your navigation logic here
+            //           // For example, you can use Navigator.push to navigate to another page
+            //           Navigator.push(
+            //             context,
+            //             MaterialPageRoute(builder: (context) => quickChat()),
+            //           );
+            //         },
+            //         style: ElevatedButton.styleFrom(
+            //           shape: RoundedRectangleBorder(
+            //             borderRadius: BorderRadius.circular(0.0),
+            //           ),
+            //           elevation: 10.0,
+            //           padding: EdgeInsets.all(0),
+            //           primary: Colors.transparent,
+            //         ),
+            //         child: Ink(
+            //           decoration: BoxDecoration(
+            //             gradient: LinearGradient(
+            //               colors: [
+            //                 Color.fromARGB(255, 250, 250, 251),
+            //                 Color.fromRGBO(245, 247, 245, 1)
+            //               ],
+            //               begin: Alignment.topLeft,
+            //               end: Alignment.bottomRight,
+            //             ),
+            //             borderRadius: BorderRadius.circular(20),
+            //           ),
+            //           child: const Padding(
+            //             padding: EdgeInsets.all(5.0),
+            //             child: Center(
+            //               child: Text(
+            //                 'Quick Chat',
+            //                 style: TextStyle(
+            //                   fontFamily: 'S S P',
+            //                   color: Colors.black,
+            //                   fontSize: 45.0,
+            //                   fontWeight: FontWeight.bold,
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+         
           ],
         ),
       ),

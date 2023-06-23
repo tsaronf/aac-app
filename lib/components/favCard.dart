@@ -24,8 +24,8 @@ class FavCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
-      width: 150,
+      height: 500,
+      width: 500,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -39,7 +39,6 @@ class FavCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          
           Spacer(),
           MaterialButton(
             onPressed: () async {
@@ -57,18 +56,18 @@ class FavCard extends StatelessWidget {
                 Image.asset(
                   'image/$image.png',
 
-                  height: 100.0,
-                  width: 100.0, // set the height of the image
+                  height: 90.0,
+                  width: 300.0, // set the height of the image
                 ),
-                SizedBox(height: 8.0),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                SizedBox(height: 4.0),
+                  Padding(
+                  padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     text,
                     style: TextStyle(
-                      fontFamily: 'Pacifico',
-                      fontWeight: FontWeight.normal,
-                      fontSize: 15.0,
+                      fontFamily: 'S S P',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.0,
                       color: Colors.black,
                     ),
                   ),

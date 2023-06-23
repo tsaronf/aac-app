@@ -16,7 +16,7 @@ class activities extends StatelessWidget {
         title: Text(
           "Activities",
           style: TextStyle(
-            fontFamily: 'Source Sans Pro',
+            fontFamily: 'S S P',
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -33,7 +33,7 @@ class activities extends StatelessWidget {
           lastcard(
             image: 'image/run.png',
             text: 'Run',
-            audioFile: 'assets/sounds/falling.mp3',
+            audioFile: 'assets/sounds/run.mp3',
           ),
           lastcard(
             image: 'image/wet-floor.png',

@@ -28,7 +28,7 @@ class BottomNavCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 150,
       width: 150,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -85,18 +85,18 @@ class BottomNavCard extends StatelessWidget {
                 Image.asset(
                   'image/$image.png',
 
-                  height: 90.0,
+                  height: 70.0,
                   width: 90.0, // set the height of the image
                 ),
                 SizedBox(height: 4.0),
                 Padding(
-                  padding: const EdgeInsets.only(bottom : 4.0),
+                  padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     text,
                     style: TextStyle(
-                      fontFamily: 'Pacifico',
-                      fontWeight: FontWeight.normal,
-                      fontSize: 15.0,
+                      fontFamily: 'S S P',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16.0,
                       color: Colors.black,
                     ),
                   ),
