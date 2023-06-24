@@ -30,14 +30,16 @@ class lastcard extends StatelessWidget {
                 height: 70.0,
                 width: 80.0,
               ),
-              SizedBox(height: 6),
-              Text(
-                text,
-                style: TextStyle(
-                  fontFamily: 'S S P',
-                  fontWeight: FontWeight.normal,
-                  fontSize: 25.0,
-                  color: Colors.black,
+              const SizedBox(height: 6),
+              Flexible(
+                child: Text(
+                  text,
+                  style: const TextStyle(
+                    fontFamily: 'S S P',
+                    fontWeight: FontWeight.normal,
+                    fontSize: 25.0,
+                    color: Colors.black,
+                  ),
                 ),
               )
             ],

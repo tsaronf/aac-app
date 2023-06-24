@@ -115,7 +115,7 @@ class _enhomePageState extends State<enhomePage> {
           scrollDirection: Axis.horizontal,
           children: categoryList.map((item) {
             return Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: 150, // Adjust the width as per your requirement
                 decoration: BoxDecoration(
@@ -138,11 +138,11 @@ class _enhomePageState extends State<enhomePage> {
           }).toList(),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 192, 168, 236),
+      backgroundColor: const Color.fromARGB(255, 192, 168, 236),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 160, 118, 238),
+        backgroundColor: const Color.fromARGB(255, 160, 118, 238),
         leading: IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {
             Navigator.push(
               context,
@@ -152,11 +152,11 @@ class _enhomePageState extends State<enhomePage> {
             );
           },
         ),
-        title: Text("LISAN"),
+        title: const Text("LISAN"),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.games_outlined,
               size: 30.0,
             ),
@@ -164,7 +164,7 @@ class _enhomePageState extends State<enhomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FirstGameScreen(),
+                  builder: (context) => const FirstGameScreen(),
                 ),
               );
             },
@@ -177,7 +177,8 @@ class _enhomePageState extends State<enhomePage> {
           children: [
             // Fav List TODO
             Padding(
-              padding: EdgeInsets.all(10.0), // Add padding around the GridView
+              padding:
+                  const EdgeInsets.all(10.0), // Add padding around the GridView
               child: Container(
                 height: 350,
                 width: 350,
@@ -185,7 +186,8 @@ class _enhomePageState extends State<enhomePage> {
                 child: favCategories.length > 0
                     ? GridView.builder(
                         scrollDirection: Axis.horizontal,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8.0,
                           mainAxisSpacing: 15.0,
@@ -196,7 +198,7 @@ class _enhomePageState extends State<enhomePage> {
                           if (index < favCategories.length) {
                             final imagePath = favCategories[index]['image'];
                             return Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 width:
                                     380.0, // Adjust the width as per your requirement
@@ -222,15 +224,15 @@ class _enhomePageState extends State<enhomePage> {
                           }
                         })
                     : Card(
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                             // borderRadius: BorderRadius.circular(10.0),
                             ),
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             // borderRadius: BorderRadius.circular(10.0),
                             color: Color.fromARGB(255, 192, 168, 236),
                           ),
-                          child: Center(
+                          child: const Center(
                             //change language and text
                             child: Text(
                               'Add Your Favorites',
@@ -245,7 +247,7 @@ class _enhomePageState extends State<enhomePage> {
               ),
             ),
             // Bottom navigation
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             // Padding(
             //   padding: EdgeInsets.all(16.0),
             //   child: Card(
@@ -258,53 +260,55 @@ class _enhomePageState extends State<enhomePage> {
 
             // Card outside GridView
             // SizedBox(height: 2),
-            Padding(
-              padding: EdgeInsets.all(6.0),
-              child: Container(
-                height: 100,
-                width: 360,
-                // decoration: BoxDecoration(
-                //   color: Colors.blue,
-                //   borderRadius: BorderRadius.circular(20.0),
-                // ),
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Add your navigation logic here
-                    // For example, you can use Navigator.push to navigate to another page
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => quickChat()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0.0),
-                    ),
-                    elevation: 10.0,
-                    padding: EdgeInsets.all(0),
-                    primary: Colors.transparent,
-                  ),
-                  child: Ink(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 250, 250, 251),
-                          Color.fromRGBO(245, 247, 245, 1)
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: SizedBox(
+                  height: 100,
+                  width: 360,
+                  // decoration: BoxDecoration(
+                  //   color: Colors.blue,
+                  //   borderRadius: BorderRadius.circular(20.0),
+                  // ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Add your navigation logic here
+                      // For example, you can use Navigator.push to navigate to another page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => quickChat()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0.0),
                       ),
-                      borderRadius: BorderRadius.circular(20),
+                      elevation: 10.0,
+                      padding: const EdgeInsets.all(0),
+                      primary: Colors.transparent,
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(5.0),
-                      child: Center(
-                        child: Text(
-                          'Quick Chat',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 60.0,
-                            fontWeight: FontWeight.bold,
+                    child: Ink(
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 250, 250, 251),
+                            Color.fromRGBO(245, 247, 245, 1)
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Center(
+                          child: Text(
+                            'Quick Chat',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 35.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
