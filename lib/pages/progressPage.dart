@@ -153,7 +153,7 @@ class _ProgressPageState extends State<ProgressPage> {
            Container(
               height: 200,
               child: ListView.builder(
-                itemCount: mostActiveCategories.length,
+                itemCount: mostActiveDays.length,
                 itemBuilder: (BuildContext context, int index) {
                   String dayName =
                       mostActiveDays[index]['day_of_the_week'];

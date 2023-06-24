@@ -13,6 +13,9 @@ import 'package:sampleproject/pages/ampages/am_quickChat.dart';
 import 'package:sampleproject/pages/ampages/am_family.dart';
 import 'package:sampleproject/pages/ampages/am_cloths.dart';
 import 'package:sampleproject/pages/ampages/am_materials.dart';
+import 'package:sampleproject/pages/ampages/am_illustrations.dart';
+
+import 'package:sampleproject/pages/ampages/am_game_homepage.dart';
 
 // import 'package:sampleproject/pages/animation.dart';
 import 'package:sampleproject/components/bottomNavCard.dart';
@@ -94,6 +97,8 @@ class _homePageState extends State<homePage> {
         return am_cloths();
       case 'am_materials':
         return am_materials();
+      case 'am_illustrations':
+        return am_illustrations();
       // Add more cases for each page you want to navigate to
       default:
         return Container();
@@ -147,7 +152,7 @@ class _homePageState extends State<homePage> {
             );
           },
         ),
-        title: Text("AAC"),
+        title: Text("ልሣን"),
         centerTitle: true,
         actions: [
           IconButton(
@@ -155,7 +160,14 @@ class _homePageState extends State<homePage> {
               Icons.games_outlined,
               size: 30.0,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => am_game_homepage(),
+                ),
+              );
+            },
             // Handle fourth button press
           ),
         ],
@@ -166,15 +178,15 @@ class _homePageState extends State<homePage> {
             Padding(
               padding: EdgeInsets.all(16.0),
               child: Container(
-                height: 380,
-                width: 380,
+                height: 350,
+                width: 350,
                 child: favCategories.length > 0
                     ? GridView.builder(
                         scrollDirection: Axis.horizontal,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8.0,
-                          mainAxisSpacing: 8.0,
+                          mainAxisSpacing: 3.0,
                           childAspectRatio: 1.0,
                         ),
                         itemCount: favCategories.length,
@@ -185,7 +197,7 @@ class _homePageState extends State<homePage> {
                               padding: EdgeInsets.all(8.0),
                               child: Container(
                                 width:
-                                    150, // Adjust the width as per your requirement
+                                    370.0, // Adjust the width as per your requirement
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                 ),
@@ -220,8 +232,8 @@ class _homePageState extends State<homePage> {
                           child: Center(
                             //change language and text
                             child: Text(
-                              'Additional Card',
-                              style: TextStyle(fontSize: 18.0),
+                              'ተወዳጆችዎን ያክሉ',
+                              style: TextStyle(fontSize: 38.0),
                             ),
                           ),
                         ),
@@ -235,8 +247,8 @@ class _homePageState extends State<homePage> {
             Padding(
               padding: EdgeInsets.all(6.0),
               child: Container(
-                height: 150,
-                width: 380,
+                height: 80,
+                width: 360,
                 // decoration: BoxDecoration(
                 //   color: Colors.blue,
                 //   borderRadius: BorderRadius.circular(20.0),
@@ -277,7 +289,7 @@ class _homePageState extends State<homePage> {
                           'ንግግር',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 40.0,
+                            fontSize: 50.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

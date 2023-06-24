@@ -25,48 +25,54 @@ class am_feelings extends StatelessWidget {
         children: <Widget>[
           lastcard(
             image: 'image/afraid.png',
-            text: 'ጭንቀት',
-            audioFile: 'assets/sounds/Afraid-am.mp3',
+            text: 'መረበሽ',
+            audioFile: 'assets/sounds/nervous-am.mp3',
           ),
           lastcard(
             image: 'image/bored.png',
             text: 'ድብርት',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            audioFile: 'assets/sounds/bored-am.mp3',
           ),
           lastcard(
             image: 'image/cold.png',
             text: 'ብርድ',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            audioFile: 'assets/sounds/cold-am.mp3',
           ),
           lastcard(
             image: 'image/fatigue.png',
             text: 'ድካም',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            audioFile: 'assets/sounds/fatigue-am.mp3',
           ),
           lastcard(
             image: 'image/happy.png',
-            text: 'ደስተኛ',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            text: 'ደስታ',
+            audioFile: 'assets/sounds/happy-am.mp3',
+          ),
+          lastcard(
+            image: 'image/sad.png',
+            text: 'ሓዘን',
+            audioFile: 'assets/sounds/sad-am.mp3',
           ),
           lastcard(
             image: 'image/hot.png',
             text: 'ሙቀት',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            audioFile: 'assets/sounds/hot-am.mp3',
           ),
           lastcard(
             image: 'image/hungry.png',
-            text: 'ረሐብ',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            text: 'መራብ',
+            audioFile: 'assets/sounds/hungry-am.mp3',
           ),
           lastcard(
             image: 'image/nervous.png',
             text: 'ፍርሐት',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            audioFile: 'assets/sounds/afraid-am.mp3',
+
           ),
           lastcard(
             image: 'image/thirsty.png',
-            text: 'ጥማት',
-            audioFile: 'assets/sounds/apple-am.mp3',
+            text: 'መጠማት',
+            audioFile: 'assets/sounds/thristy-am.mp3',
           ),
         ],
       ),

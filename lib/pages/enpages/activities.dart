@@ -16,7 +16,7 @@ class activities extends StatelessWidget {
         title: Text(
           "Activities",
           style: TextStyle(
-            fontFamily: 'Source Sans Pro',
+            fontFamily: 'S S P',
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -33,7 +33,7 @@ class activities extends StatelessWidget {
           lastcard(
             image: 'image/run.png',
             text: 'Run',
-            audioFile: 'assets/sounds/falling.mp3',
+            audioFile: 'assets/sounds/run.mp3',
           ),
           lastcard(
             image: 'image/wet-floor.png',
@@ -48,27 +48,27 @@ class activities extends StatelessWidget {
           lastcard(
             image: 'image/sleep.png',
             text: 'Sleeping',
-            audioFile: 'assets/sounds/Sleeping.mp3',
+            audioFile: 'assets/sounds/sleeping.mp3',
           ),
           lastcard(
             image: 'image/morning.png',
             text: 'waking up',
-            audioFile: 'assets/sounds/Get up-am.mp3',
+            audioFile: 'assets/sounds/waking up.mp3',
           ),
           lastcard(
             image: 'image/dressing.png',
             text: 'wearing cloth',
-            audioFile: 'assets/sounds/Dress up-am.mp3',
+            audioFile: 'assets/sounds/wearing cloth.mp3',
           ),
           lastcard(
             image: 'image/playtime.png',
             text: 'playing',
-            audioFile: 'assets/sounds/Play-am.mp3',
+            audioFile: 'assets/sounds/playing.mp3',
           ),
           lastcard(
             image: 'image/triangle.png',
             text: 'Moving',
-            audioFile: 'assets/sounds/Moving.mp3',
+            audioFile: 'assets/sounds/moving.mp3',
           ),
           lastcard(
             image: 'image/shower.png',
@@ -84,33 +84,33 @@ class activities extends StatelessWidget {
           lastcard(
             image: 'image/jump.png',
             text: 'Jumping',
-            audioFile: 'assets/sounds/Jumping.mp3',
+            audioFile: 'assets/sounds/jumping.mp3',
           ),
           lastcard(
-            image: 'image/hold.png',
+            image: 'image/holding-hands.png',
             text: 'Holding',
             audioFile: 'assets/sounds/holding.mp3',
           ),
-          lastcard(
-            image: 'image/came.png',
-            text: 'Coming',
-            audioFile: 'assets/sounds/Coming.mp3',
-          ),
-          lastcard(
-            image: 'image/went.png',
-            text: 'To go',
-            audioFile: 'assets/sounds/going.mp3',
-          ),
-          lastcard(
-            image: 'image/open.png',
-            text: 'To open',
-            audioFile: 'assets/sounds/Opening.mp3',
-          ),
-          lastcard(
-            image: 'image/close.png',
-            text: 'To close',
-            audioFile: 'assets/sounds/Closing.mp3',
-          ),
+          // lastcard(
+          //   image: 'image/comeg.gif',
+          //   text: 'Coming',
+          //   audioFile: 'assets/sounds/Coming.mp3',
+          // ),
+          // lastcard(
+          //   image: 'image/went.png',
+          //   text: 'To go',
+          //   audioFile: 'assets/sounds/going.mp3',
+          // ),
+          // lastcard(
+          //   image: 'image/open.png',
+          //   text: 'To open',
+          //   audioFile: 'assets/sounds/Opening.mp3',
+          // ),
+          // lastcard(
+          //   image: 'image/close.png',
+          //   text: 'To close',
+          //   audioFile: 'assets/sounds/Closing.mp3',
+          // ),
         ],
       ),
     );

@@ -33,7 +33,7 @@ class am_activities extends StatelessWidget {
           lastcard(
             image: 'image/run.png',
             text: 'መሮጥ',
-            audioFile: 'assets/sounds/Fall-am.mp3',
+            audioFile: 'assets/sounds/run-am.mp3',
           ),
           lastcard(
             image: 'image/wet-floor.png',
@@ -42,23 +42,23 @@ class am_activities extends StatelessWidget {
           ),
           lastcard(
             image: 'image/breaking.png',
-            text: 'መሰበር',
+            text: 'ሰበር',
             audioFile: 'assets/sounds/Break-am.mp3',
           ),
           lastcard(
             image: 'image/sleep.png',
             text: 'መተኛት',
-            audioFile: 'assets/sounds/Sleep-am.mp3',
+            audioFile: 'assets/sounds/sleep-am.mp3',
           ),
           lastcard(
             image: 'image/morning.png',
-            text: 'መነሳት',
-            audioFile: 'assets/sounds/Get up-am.mp3',
+            text: 'መንቃት',
+            audioFile: 'assets/sounds/wake up-am.mp3',
           ),
           lastcard(
             image: 'image/dressing.png',
             text: 'መልበስ',
-            audioFile: 'assets/sounds/Dress up-am.mp3',
+            audioFile: 'assets/sounds/dress up-am.mp3',
           ),
           lastcard(
             image: 'image/playtime.png',
@@ -68,48 +68,38 @@ class am_activities extends StatelessWidget {
           lastcard(
             image: 'image/triangle.png',
             text: 'መንቀሳቀስ',
-            audioFile: 'assets/sounds/Move around-am.mp3',
+            audioFile: 'assets/sounds/MoveAround-am.mp3',
           ),
           lastcard(
             image: 'image/shower.png',
             text: 'ገላ መታጠብ',
-            audioFile: 'assets/sounds/washing body-am.mp3',
+            audioFile: 'assets/sounds/washingbody-am.mp3',
           ),
           //replace sound
           lastcard(
             image: 'image/brushing-teeth.png',
             text: 'ጥርስ መቦረሽ',
-            audioFile: 'assets/sounds/Break-am.mp3',
+            audioFile: 'assets/sounds/brushing your teeth-am.mp3',
           ),
           lastcard(
             image: 'image/jump.png',
             text: 'መዝለል',
             audioFile: 'assets/sounds/Jump-am.mp3',
           ),
-           lastcard(
-            image: 'image/hold.png',
+          lastcard(
+            image: 'image/holding-hands.png',
             text: 'መያዝ',
-            audioFile: 'assets/sounds/Hold-am.mp3',
-          ),
-            lastcard(
-            image: 'image/came.png',
-            text: 'መምጣት',
-            audioFile: 'assets/sounds/Came-am.mp3',
-          ),
-           lastcard(
-            image: 'image/went.png',
-            text: 'መሄድ',
-            audioFile: 'assets/sounds/Went-am.mp3',
-          ),
-           lastcard(
-            image: 'image/open.png',
-            text: 'መክፈት',
-            audioFile: 'assets/sounds/Open-am.mp3',
+            audioFile: 'assets/sounds/hold-am.mp3',
           ),
           lastcard(
-            image: 'image/close.png',
-            text: 'መዝጋት',
-            audioFile: 'assets/sounds/CLosed-am.mp3',
+            image: 'image/came.png',
+            text: 'መምጣት',
+            audioFile: 'assets/sounds/come-am.mp3',
+          ),
+          lastcard(
+            image: 'image/went.png',
+            text: 'መሄድ',
+            audioFile: 'assets/sounds/go-am.mp3',
           ),
           
         ],

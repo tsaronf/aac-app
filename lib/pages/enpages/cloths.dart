@@ -26,12 +26,12 @@ class cloths extends StatelessWidget {
           lastcard(
             image: 'image/trousers.png',
             text: 'Trousers',
-            audioFile: 'assets/sounds/Black-am.mp3',
+            audioFile: 'assets/sounds/pants.mp3',
           ),
           lastcard(
             image: 'image/sweater.png',
             text: 'Sweater',
-            audioFile: 'assets/sounds/sweater-am.mp3',
+            audioFile: 'assets/sounds/sweater.mp3',
           ),
           lastcard(
             image: 'image/jacket.png',
@@ -41,7 +41,7 @@ class cloths extends StatelessWidget {
           lastcard(
             image: 'image/shirt.png',
             text: 'T-shirt',
-            audioFile: 'assets/sounds/T-shirt-am.mp3',
+            audioFile: 'assets/sounds/T-shirt.mp3',
           ),
           lastcard(
             image: 'image/socks.png',
@@ -59,9 +59,9 @@ class cloths extends StatelessWidget {
             audioFile: 'assets/sounds/shoe.mp3',
           ),
           lastcard(
-            image: 'image/shirt(1).png',
+            image: 'image/Shirtv.png',
             text: 'Shirt',
-            audioFile: 'assets/sounds/T-shirt.mp3',
+            audioFile: 'assets/sounds/shirt.mp3',
           ),
           lastcard(
             image: 'image/dress.png',

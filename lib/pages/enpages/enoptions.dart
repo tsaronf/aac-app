@@ -71,38 +71,7 @@ class enoptions extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   child: Row(
                     children: <Widget>[
-                      Text('Progress',
-                          style: TextStyle(
-                            color: Colors.teal.shade800,
-                            fontFamily: 'Source',
-                            fontSize: 25.0,
-                          )),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-     GestureDetector(
-            onTap: () {
-              // AssetsAudioPlayer.newPlayer()
-              //     .open(Audio('assets/sounds/tap.wav'));
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => enprogressPage(),
-                ),
-              );
-            },
-            child: Container(
-              height: 100.0,
-              child: Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Row(
-                    children: <Widget>[
-                      Text('Settings',
+                      Text('Usage',
                           style: TextStyle(
                             color: Colors.teal.shade800,
                             fontFamily: 'Source',

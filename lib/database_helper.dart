@@ -9,33 +9,35 @@ class DatabaseHelper {
     {'name': 'እንስሳ', 'machineName': 'am_animals', 'image': 'dog'},
     {'name': 'ምግብ', 'machineName': 'am_foods', 'image': 'dinner'},
     {'name': 'የሰውነት ክፍል', 'machineName': 'am_bodyparts', 'image': 'humanoid'},
-    {'name': 'የቤተሰብ አባላት', 'machineName': 'am_family', 'image': 'family'},
+    {'name': 'ቤተሰብ', 'machineName': 'am_family', 'image': 'family'},
     {'name': 'ድርጊት', 'machineName': 'am_activities', 'image': 'mental-health'},
     {'name': 'ቀለማት', 'machineName': 'am_color', 'image': 'colour'},
-    {'name': 'ትዕዛዛት', 'machineName': 'am_instructions', 'image': 'box'},
     {'name': 'ቁሳቁስ', 'machineName': 'am_materials', 'image': 'box'},
-    {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'box'},
+    {'name': 'ምሳሌ', 'machineName': 'am_illustrations', 'image': 'reference'},
     {'name': 'ስሜት', 'machineName': 'am_feelings', 'image': 'emotion'},
-    {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'emotion'},
-    {'name': 'ንግግር', 'machineName': 'am_quickChat', 'image': 'emotion'}
+    {'name': 'አልባሳት', 'machineName': 'am_cloths', 'image': 'cloth'},
+    {'name': 'ንግግር', 'machineName': 'am_quickChat', 'image': 'talking'}
   ];
   final List<Map<String, String>> listOfEnglishCategories = [
-    {'name': 'animals', 'machineName': 'animals', 'image': 'dog'},
-    {'name': 'foods', 'machineName': 'foods', 'image': 'dinner'},
-    {'name': 'bodyparts', 'machineName': 'bodyparts', 'image': 'humanoid'},
-    {'name': 'family', 'machineName': 'family', 'image': 'family'},
+    {'name': 'Animals', 'machineName': 'animals', 'image': 'dog'},
+    {'name': 'Foods', 'machineName': 'foods', 'image': 'dinner'},
+    {'name': 'Bodyparts', 'machineName': 'bodyparts', 'image': 'humanoid'},
+    {'name': 'Family', 'machineName': 'family', 'image': 'family'},
     {
       'name': 'activities',
       'machineName': 'activities',
       'image': 'mental-health'
     },
-    {'name': 'color', 'machineName': 'color', 'image': 'colour'},
-    {'name': 'instructions', 'machineName': 'instructions', 'image': 'box'},
-    {'name': 'materials', 'machineName': 'materials', 'image': 'box'},
-    {'name': 'illustrations', 'machineName': 'illustrations', 'image': 'box'},
-    {'name': 'feelings', 'machineName': 'feelings', 'image': 'emotion'},
-    {'name': 'cloths', 'machineName': 'cloths', 'image': 'emotion'},
-    {'name': 'Quick Chat', 'machineName': 'quickChat', 'image': 'emotion'}
+    {'name': 'Color', 'machineName': 'color', 'image': 'colour'},
+    {'name': 'Materials', 'machineName': 'materials', 'image': 'box'},
+    {
+      'name': 'Illustration',
+      'machineName': 'illustrations',
+      'image': 'reference'
+    },
+    {'name': 'Feelings', 'machineName': 'feelings', 'image': 'emotion'},
+    {'name': 'Cloths', 'machineName': 'cloths', 'image': 'cloth'},
+    {'name': 'Quick Chat', 'machineName': 'quickChat', 'image': 'talking'}
   ];
 
   factory DatabaseHelper() => _instance;

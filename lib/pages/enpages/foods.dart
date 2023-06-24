@@ -46,7 +46,7 @@ class foods extends StatelessWidget {
           lastcard(
             image: 'image/cabbage.png',
             text: 'Cabbage',
-            audioFile: 'assets/sounds/Collard-am.mp3',
+            audioFile: 'assets/sounds/cabbage.mp3',
           ),
           lastcard(
             image: 'image/carrot.png',
@@ -65,7 +65,7 @@ class foods extends StatelessWidget {
           ),
           lastcard(
             image: 'image/cookies.png',
-            text: 'Cookies',
+            text: 'Biscuit',
             audioFile: 'assets/sounds/biscuit.mp3',
           ),
           lastcard(
@@ -106,7 +106,7 @@ class foods extends StatelessWidget {
           lastcard(
             image: 'image/papaya.png',
             text: 'Papaya',
-            audioFile: 'assets/sounds/papaya-am.mp3',
+            audioFile: 'assets/sounds/papaya.mp3',
           ),
           lastcard(
             image: 'image/pasta.png',
@@ -116,7 +116,7 @@ class foods extends StatelessWidget {
           lastcard(
             image: 'image/pineapple.png',
             text: 'Pineapple',
-            audioFile: 'assets/sounds/pinapple.mp3',
+            audioFile: 'assets/sounds/pineapple.mp3',
           ),
           lastcard(
             image: 'image/potato.png',
@@ -130,13 +130,13 @@ class foods extends StatelessWidget {
           ),
           lastcard(
             image: 'image/tomato.png',
-            text: 'ቲማቲም',
+            text: 'Tomato',
             audioFile: 'assets/sounds/tomato.mp3',
           ),
           lastcard(
             image: 'image/watermelon.png',
-            text: 'ሃባብ',
-            audioFile: 'assets/sounds/watermelon-am.mp3',
+            text: 'Watermelon',
+            audioFile: 'assets/sounds/watermelon.mp3',
           ),
         ],
       ),

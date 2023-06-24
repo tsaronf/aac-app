@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:assets_audio_player/assets_audio_player.dart';
 
 class lastcard extends StatelessWidget {
-  lastcard({
-    required this.image,
-    required this.text,
-  required this.audioFile
-  });
+  lastcard({required this.image, required this.text, required this.audioFile});
   final String audioFile;
   final String image;
   final String text;
@@ -38,7 +34,7 @@ class lastcard extends StatelessWidget {
               Text(
                 text,
                 style: TextStyle(
-                  fontFamily: 'Pacifico',
+                  fontFamily: 'S S P',
                   fontWeight: FontWeight.normal,
                   fontSize: 25.0,
                   color: Colors.black,

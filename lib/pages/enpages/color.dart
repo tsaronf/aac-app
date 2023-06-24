@@ -66,7 +66,7 @@ class color extends StatelessWidget {
           lastcard(
             image: 'image/brown color.png',
             text: 'Brown',
-            audioFile: 'assets/sounds/Brown.mp3',
+            audioFile: 'assets/sounds/brown.mp3',
           ),
           lastcard(
             image: 'image/orange color.png',

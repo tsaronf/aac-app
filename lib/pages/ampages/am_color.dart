@@ -71,12 +71,12 @@ class am_color extends StatelessWidget {
           lastcard(
             image: 'image/orange color.png',
             text: 'ብርቱካናማ',
-            audioFile: 'assets/sounds/Orange-am.mp3',
+            audioFile: 'assets/sounds/orange-am.mp3',
           ),
           lastcard(
             image: 'image/purple color.png',
             text: 'ሐምራዊ',
-            audioFile: 'assets/sounds/Purple-am.mp3',
+            audioFile: 'assets/sounds/violet-am.mp3',
           ),
         ],
       ),

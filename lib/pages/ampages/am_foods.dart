@@ -101,7 +101,7 @@ class am_foods extends StatelessWidget {
           lastcard(
             image: 'image/orange.png',
             text: 'ብርቱካን',
-                        audioFile: 'assets/sounds/Orange-am.mp3',
+                        audioFile: 'assets/sounds/orange-am.mp3',
           ),
           lastcard(
             image: 'image/papaya.png',

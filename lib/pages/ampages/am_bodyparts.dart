@@ -36,7 +36,7 @@ class am_bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/nose.png',
             text: 'አፍንጫ',
-            audioFile: 'assets/sounds/Nose-am.mp3',
+            audioFile: 'assets/sounds/nose-am.mp3',
           ),
           lastcard(
             image: 'image/back.png',
@@ -81,12 +81,12 @@ class am_bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/open-mouth.png',
             text: 'አፍ',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/mouth-am.mp3',
           ),
           lastcard(
             image: 'image/stomach.png',
             text: 'ሆድ',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/belly-am.mp3',
           ),
           lastcard(
             image: 'image/neck.png',
@@ -96,7 +96,7 @@ class am_bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/tongue.png',
             text: 'ምላስ',
-            audioFile: 'assets/sounds/Tongue-am.mp3',
+            audioFile: 'assets/sounds/tongue-am.mp3',
           ),
           lastcard(
             image: 'image/hair.png',
@@ -106,7 +106,7 @@ class am_bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/head.png',
             text: 'ጭንቅላት',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/head-am.mp3',
           ),
         ],
       ),

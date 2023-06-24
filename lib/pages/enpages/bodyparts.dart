@@ -31,7 +31,7 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/eye.png',
             text: 'Eye',
-            audioFile: 'assets/sounds/eye.mp3',
+            audioFile: 'assets/sounds/Eye.mp3',
           ),
           lastcard(
             image: 'image/nose.png',
@@ -51,12 +51,12 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/chest.png',
             text: 'Chest',
-            audioFile: 'assets/sounds/Chest.mp3',
+            audioFile: 'assets/sounds/chest.mp3',
           ),
           lastcard(
             image: 'image/ear.png',
             text: 'Ear',
-            audioFile: 'assets/sounds/ear.mp3',
+            audioFile: 'assets/sounds/Ear.mp3',
           ),
           lastcard(
             image: 'image/hello.png',
@@ -76,17 +76,17 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/nail.png',
             text: 'Nails',
-            audioFile: 'assets/sounds/nails.mp3',
+            audioFile: 'assets/sounds/nail.mp3',
           ),
           lastcard(
             image: 'image/open-mouth.png',
             text: 'Mouth',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/mouth.mp3',
           ),
           lastcard(
             image: 'image/stomach.png',
             text: 'Stomach',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/stomach.mp3',
           ),
           lastcard(
             image: 'image/neck.png',
@@ -96,7 +96,7 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/tongue.png',
             text: 'Tounge',
-            audioFile: 'assets/sounds/toungue.mp3',
+            audioFile: 'assets/sounds/tounge.mp3',
           ),
           lastcard(
             image: 'image/hair.png',
@@ -106,7 +106,7 @@ class bodyparts extends StatelessWidget {
           lastcard(
             image: 'image/head.png',
             text: 'Head',
-            audioFile: 'assets/sounds/Cat-am.mp3',
+            audioFile: 'assets/sounds/head.mp3',
           ),
         ],
       ),

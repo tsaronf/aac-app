@@ -24,7 +24,7 @@ class am_materials extends StatelessWidget {
         mainAxisSpacing: 5,
         children: <Widget>[
           lastcard(
-            image: 'image/cup.png',
+            image: 'image/coffee.png',
             text: 'ኩባያ',
             audioFile: 'assets/sounds/Cup-am.mp3',
 
@@ -33,14 +33,14 @@ class am_materials extends StatelessWidget {
           lastcard(
             image: 'image/potty.png',
             text: 'ፖፖ',
-            audioFile: 'assets/sounds/Potty.mp3',
+            audioFile: 'assets/sounds/Potty-am.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
           lastcard(
             image: 'image/tv-app.png',
             text: 'ቲቪ',
-            audioFile: 'assets/sounds/TV-am.mp3',
+            audioFile: 'assets/sounds/tv-am.mp3',
 
             // audioFile: 'voice/Black.ogg',
           ),
@@ -63,7 +63,7 @@ class am_materials extends StatelessWidget {
             audioFile: 'assets/sounds/Fork-am.mp3',
           ),
           lastcard(
-            image: 'image/plate.png',
+            image: 'image/plates.png',
             text: 'ሳህን',
             audioFile: 'assets/sounds/Plate-am.mp3',
           ),
@@ -80,7 +80,7 @@ class am_materials extends StatelessWidget {
           lastcard(
             image: 'image/cabinet.png',
             text: 'ኮመዲኖ',
-            audioFile: 'assets/sounds/Table-am.mp3',
+            audioFile: 'assets/sounds/cabinet-am.mp3',
           ),
           lastcard(
             image: 'image/table.png',
@@ -120,17 +120,17 @@ class am_materials extends StatelessWidget {
           lastcard(
             image: 'image/pencil.png',
             text: 'እስራስ',
-            audioFile: 'assets/sounds/Pencil-am.mp3',
+            audioFile: 'assets/sounds/pencil-am.mp3',
           ),
           lastcard(
             image: 'image/pen.png',
             text: 'እስክርቢቶ',
-            audioFile: 'assets/sounds/Pen-am.mp3',
+            audioFile: 'assets/sounds/pen-am.mp3',
           ),
           lastcard(
             image: 'image/soap.png',
             text: 'ሣሙና',
-            audioFile: 'assets/sounds/Soap-am.mp3',
+            audioFile: 'assets/sounds/soap-am.mp3',
           ),
           lastcard(
             image: 'image/mirror.png',
