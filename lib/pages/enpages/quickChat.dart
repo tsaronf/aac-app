@@ -31,37 +31,44 @@ class quickChat extends StatelessWidget {
           ),
           AnimationCard(
             image: 'image/toilet.webp',
-            text: 'Toilet',
+            text: 'Where is the toilet',
             audioFile: 'assets/sounds/where is the toilet.mp3',
           ),
           AnimationCard(
             image: 'image/sick.webp',
             text: 'I am sick',
-            audioFile: 'assets/sounds/I am sick.mp3',          ),
+            audioFile: 'assets/sounds/I am sick.mp3',
+          ),
           AnimationCard(
             image: 'image/notwant.webp',
-            text: 'I dont want it',
-            audioFile: 'assets/sounds/I dont want that.mp3',          ),
+            text: 'I dont want that',
+            audioFile: 'assets/sounds/I dont want that.mp3',
+          ),
           AnimationCard(
             image: 'image/morning.webp',
             text: 'Good morning',
-            audioFile: 'assets/sounds/good morning.mp3',          ),
+            audioFile: 'assets/sounds/good morning.mp3',
+          ),
           AnimationCard(
             image: 'image/night.webp',
             text: 'Good evening',
-            audioFile: 'assets/sounds/good evening.mp3',          ),
+            audioFile: 'assets/sounds/good evening.mp3',
+          ),
           AnimationCard(
             image: 'image/good night.webp',
             text: 'Good night',
-            audioFile: 'assets/sounds/good night.mp3',          ),
+            audioFile: 'assets/sounds/good night.mp3',
+          ),
           AnimationCard(
             image: 'image/sorry.webp',
             text: 'Sorry',
-            audioFile: 'assets/sounds/sorry.mp3',          ),
+            audioFile: 'assets/sounds/sorry.mp3',
+          ),
           AnimationCard(
             image: 'image/thank you.webp',
             text: 'Thank you',
-            audioFile: 'assets/sounds/thank you.mp3',          ),
+            audioFile: 'assets/sounds/thank you.mp3',
+          ),
         ],
       ),
     );

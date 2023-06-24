@@ -24,8 +24,8 @@ class FavCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
-      width: 500,
+      height: 300,
+      width: 350,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -60,7 +60,7 @@ class FavCard extends StatelessWidget {
                   width: 300.0, // set the height of the image
                 ),
                 SizedBox(height: 4.0),
-                  Padding(
+                Padding(
                   padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     text,

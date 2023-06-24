@@ -85,46 +85,46 @@ class am_game_homepage extends StatelessWidget {
                   ),
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.all(20.0),
-              //   child: InkWell(
-              //     onTap: () {
-              //       Navigator.push(
-              //         context,
-              //         MaterialPageRoute(
-              //             builder: (context) => const SecondGameScreen()),
-              //       );
-              //     },
-              //     child: Container(
-              //       height: 200,
-              //       width: double.infinity,
-              //       child: Padding(
-              //         padding: const EdgeInsets.all(8.0),
-              //         child: Column(
-              //           children: [
-              //             SizedBox(
-              //                 height: 160,
-              //                 child: Image.asset(
-              //                   'images/drag.png',
-              //                 )),
-              //             const Spacer(),
-              //             const Text(
-              //               'Catagory',
-              //               style: TextStyle(
-              //                   color: Colors.black,
-              //                   fontSize: 18,
-              //                   fontWeight: FontWeight.w600),
-              //             )
-              //           ],
-              //         ),
-              //       ),
-              //       margin: const EdgeInsets.all(5),
-              //       decoration: BoxDecoration(
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.circular(15)),
-              //     ),
-              //   ),
-              // ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SecondGameScreen()),
+                    );
+                  },
+                  child: Container(
+                    height: 200,
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                              height: 160,
+                              child: Image.asset(
+                                'images/drag.png',
+                              )),
+                          const Spacer(),
+                          const Text(
+                            'Catagory',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600),
+                          )
+                        ],
+                      ),
+                    ),
+                    margin: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15)),
+                  ),
+                ),
+              ),
               // Padding(
               //   padding: const EdgeInsets.all(20.0),
               //   child: InkWell(

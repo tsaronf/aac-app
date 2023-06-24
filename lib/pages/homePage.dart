@@ -179,14 +179,14 @@ class _homePageState extends State<homePage> {
               padding: EdgeInsets.all(16.0),
               child: Container(
                 height: 350,
-                width: 380,
+                width: 350,
                 child: favCategories.length > 0
                     ? GridView.builder(
                         scrollDirection: Axis.horizontal,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           crossAxisSpacing: 8.0,
-                          mainAxisSpacing: 8.0,
+                          mainAxisSpacing: 3.0,
                           childAspectRatio: 1.0,
                         ),
                         itemCount: favCategories.length,
@@ -197,7 +197,7 @@ class _homePageState extends State<homePage> {
                               padding: EdgeInsets.all(8.0),
                               child: Container(
                                 width:
-                                    150, // Adjust the width as per your requirement
+                                    370.0, // Adjust the width as per your requirement
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                 ),
@@ -247,8 +247,8 @@ class _homePageState extends State<homePage> {
             Padding(
               padding: EdgeInsets.all(6.0),
               child: Container(
-                height: 150,
-                width: 380,
+                height: 80,
+                width: 360,
                 // decoration: BoxDecoration(
                 //   color: Colors.blue,
                 //   borderRadius: BorderRadius.circular(20.0),
@@ -289,7 +289,7 @@ class _homePageState extends State<homePage> {
                           'ንግግር',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 60.0,
+                            fontSize: 50.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

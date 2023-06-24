@@ -9,7 +9,7 @@ class DatabaseHelper {
     {'name': 'እንስሳ', 'machineName': 'am_animals', 'image': 'dog'},
     {'name': 'ምግብ', 'machineName': 'am_foods', 'image': 'dinner'},
     {'name': 'የሰውነት ክፍል', 'machineName': 'am_bodyparts', 'image': 'humanoid'},
-    {'name': 'የቤተሰብ አባላት', 'machineName': 'am_family', 'image': 'family'},
+    {'name': 'ቤተሰብ', 'machineName': 'am_family', 'image': 'family'},
     {'name': 'ድርጊት', 'machineName': 'am_activities', 'image': 'mental-health'},
     {'name': 'ቀለማት', 'machineName': 'am_color', 'image': 'colour'},
     {'name': 'ቁሳቁስ', 'machineName': 'am_materials', 'image': 'box'},
@@ -30,7 +30,11 @@ class DatabaseHelper {
     },
     {'name': 'Color', 'machineName': 'color', 'image': 'colour'},
     {'name': 'Materials', 'machineName': 'materials', 'image': 'box'},
-    {'name': 'Illustrations', 'machineName': 'illustrations', 'image': 'reference'},
+    {
+      'name': 'Illustration',
+      'machineName': 'illustrations',
+      'image': 'reference'
+    },
     {'name': 'Feelings', 'machineName': 'feelings', 'image': 'emotion'},
     {'name': 'Cloths', 'machineName': 'cloths', 'image': 'cloth'},
     {'name': 'Quick Chat', 'machineName': 'quickChat', 'image': 'talking'}

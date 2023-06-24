@@ -49,7 +49,7 @@ class am_quickChat extends StatelessWidget {
           ),
           AnimationCard(
             image: 'image/notwant.webp',
-            text: 'አልፋልግም',
+            text: 'ያንን አልፋልግም',
             audioFile: 'assets/sounds/i dont want that-am.mp3',
 
             // audioFile: 'assets/sounds/enGreetings05.mp3',
@@ -63,7 +63,7 @@ class am_quickChat extends StatelessWidget {
           ),
           AnimationCard(
             image: 'image/night.webp',
-            text: 'እንደምን አመሻቹ',
+            text: 'መልካም ምሽት',
             audioFile: 'assets/sounds/good evening-am.mp3',
 
             // audioFile: 'assets/sounds/enGreetings06.mp3',

@@ -96,7 +96,7 @@ class BottomNavCard extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'S S P',
                       fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
+                      fontSize: 23.0,
                       color: Colors.black,
                     ),
                   ),

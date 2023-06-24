@@ -110,7 +110,7 @@ class _enhomePageState extends State<enhomePage> {
     return Scaffold(
       bottomNavigationBar: Container(
         // padding: EdgeInsets.all(16),
-        height: 180, // Adjust the height as per your requirement
+        height: 190, // Adjust the height as per your requirement
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: categoryList.map((item) {
@@ -172,24 +172,6 @@ class _enhomePageState extends State<enhomePage> {
           ),
         ],
       ),
-
-      // body: GridView.count(
-      //   crossAxisCount: 2,
-      //   padding: EdgeInsets.all(5),
-      //   crossAxisSpacing: 5,
-      //   mainAxisSpacing: 5,
-      //    children: favCategories.map((item) {
-      //           return Padding(
-      //             padding: EdgeInsets.all(8.0),
-      //             child: Container(
-      //                 width: 150, // Adjust the width as per your requirement
-      //                 color: Colors.grey[300],
-      //                 // change based on lanaguage
-      //                 child: Text(item['am_favCategoryName'])),
-      //           );
-      //         })
-      // // ),
-
       body: SafeArea(
         child: Column(
           children: [
@@ -197,8 +179,8 @@ class _enhomePageState extends State<enhomePage> {
             Padding(
               padding: EdgeInsets.all(10.0), // Add padding around the GridView
               child: Container(
-                height: 380,
-                width: 380,
+                height: 350,
+                width: 350,
                 // Adjust the height as per your requirement
                 child: favCategories.length > 0
                     ? GridView.builder(
@@ -217,7 +199,7 @@ class _enhomePageState extends State<enhomePage> {
                               padding: EdgeInsets.all(8.0),
                               child: Container(
                                 width:
-                                    500.0, // Adjust the width as per your requirement
+                                    380.0, // Adjust the width as per your requirement
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                 ),
@@ -276,11 +258,11 @@ class _enhomePageState extends State<enhomePage> {
 
             // Card outside GridView
             // SizedBox(height: 2),
-                 Padding(
+            Padding(
               padding: EdgeInsets.all(6.0),
               child: Container(
-                height: 150,
-                width: 380,
+                height: 100,
+                width: 360,
                 // decoration: BoxDecoration(
                 //   color: Colors.blue,
                 //   borderRadius: BorderRadius.circular(20.0),
@@ -400,7 +382,6 @@ class _enhomePageState extends State<enhomePage> {
             //     ),
             //   ),
             // ),
-         
           ],
         ),
       ),
