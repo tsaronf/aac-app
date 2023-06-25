@@ -21,6 +21,7 @@ import 'package:sampleproject/database_helper.dart';
 import 'package:sampleproject/pages/enpages/illustrations.dart';
 import 'package:sampleproject/pages/enpages/materials.dart';
 import 'package:sampleproject/pages/enpages/quickChat.dart';
+import 'package:sampleproject/pages/ampages/am_game_homepage.dart';
 
 class enhomePage extends StatefulWidget {
   @override
@@ -164,7 +165,7 @@ class _enhomePageState extends State<enhomePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FirstGameScreen(),
+                  builder: (context) => am_game_homepage(),
                 ),
               );
             },
