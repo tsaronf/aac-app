@@ -22,21 +22,26 @@ class _HomeScreenState extends State<SecondGameScreen> {
     gameOver = false;
     score = 0;
     items = [
-      ItemModel(value: 'Cat', name: 'images/cat.png'),
-      ItemModel(value: 'Chicken', name: 'images/chicken.png'),
-      ItemModel(value: 'Cow', name: 'images/cow.png'),
-      ItemModel(value: 'Dog', name: 'images/dog.png'),
-      ItemModel(value: 'Elephant', name: 'images/elephant.png'),
-      ItemModel(value: 'Giraffe', name: 'images/giraffe.png'),
-      ItemModel(value: 'Goat', name: 'images/goat.png'),
-      ItemModel(value: 'Horse', name: 'images/horse.png'),
-      ItemModel(value: 'Dog', name: 'images/dog.png'),
+      // ItemModel(value: 'Cat', name: 'image/cat.png'),
+      ItemModel(value: 'Food', name: 'image/bread.png'),
+      ItemModel(value: 'Bodyparts', name: 'image/stomach.png'),
+      ItemModel(value: 'Bodyparts', name: 'image/nose.png'),
+      ItemModel(value: 'Cloth', name: 'image/shoes.png'),
+      ItemModel(value: 'Cloth', name: 'image/jacket.png'),
+      ItemModel(value: 'Family', name: 'image/mother.png'),
+      ItemModel(value: 'Family', name: 'image/brother.png'),
+      ItemModel(value: 'Food', name: 'image/carrot.png'),
+      ItemModel(value: 'Feeling', name: 'image/sad.png'),
+      ItemModel(value: 'Feeling', name: 'image/happy.png'),
     ];
     categories = [
-      ItemModel(value: 'Goat', name: 'images/goat.png'),
-      ItemModel(value: 'Cat', name: 'images/cat.png'),
-      ItemModel(value: 'Horse', name: 'images/horse.png'),
-      ItemModel(value: 'Dog', name: 'image/animal.webp'),
+      // ItemModel(value: 'Cat' 'Cow', name: 'image/animal.webp'),
+      ItemModel(value: 'Food', name: 'image/dinner.png'),
+      ItemModel(value: 'Bodyparts', name: 'image/body parts.png'),
+      ItemModel(value: 'Cloth', name: 'image/cloth.png'),
+
+      ItemModel(value: 'Family', name: 'image/family.png'),
+      ItemModel(value: 'Feeling', name: 'image/emotion.png'),
     ];
     items.shuffle();
     categories.shuffle();
@@ -55,7 +60,7 @@ class _HomeScreenState extends State<SecondGameScreen> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
-          color: Colors.blue[500],
+          color: Color.fromARGB(255, 0, 55, 100),
         ),
         child: SafeArea(
           child: SingleChildScrollView(
@@ -113,21 +118,24 @@ class _HomeScreenState extends State<SecondGameScreen> {
                       Spacer(),
                       Column(
                         children: items.map((item) {
-                          return Container(
-                            margin: EdgeInsets.all(8),
-                            child: Draggable<ItemModel>(
-                              data: item,
-                              childWhenDragging: Container(
-                                height: 100,
-                                child: Image.asset(item.name!),
-                              ),
-                              feedback: Container(
-                                height: 100,
-                                child: Image.asset(item.name!),
-                              ),
-                              child: Container(
-                                height: 80,
-                                child: Image.asset(item.name!),
+                          return Padding(
+                            padding: EdgeInsets.all(8.0), // Add padding here
+                            child: Container(
+                              margin: EdgeInsets.all(8),
+                              child: Draggable<ItemModel>(
+                                data: item,
+                                childWhenDragging: Container(
+                                  height: 100,
+                                  child: Image.asset(item.name!),
+                                ),
+                                feedback: Container(
+                                  height: 100,
+                                  child: Image.asset(item.name!),
+                                ),
+                                child: Container(
+                                  height: 80,
+                                  child: Image.asset(item.name!),
+                                ),
                               ),
                             ),
                           );
@@ -141,18 +149,20 @@ class _HomeScreenState extends State<SecondGameScreen> {
                               if (category.value == receivedItem.value) {
                                 setState(() {
                                   items.remove(receivedItem);
-                                  categories.remove(category);
+                                  if (!categories.contains(category)) {
+                                    categories.add(category);
+                                  }
                                 });
                                 score += 10;
                                 receivedItem.accepting = false;
                                 incorrectMatch = false;
-                                // player.play('true.wav');
+                                player.play('true.wav');
                               } else {
                                 setState(() {
                                   incorrectMatch = true;
                                   if (score > 0) score -= 5;
                                   receivedItem.accepting = false;
-                                  // player.play('false.wav');
+                                  player.play('voice/false.wav');
                                 });
                               }
                             },
@@ -172,17 +182,17 @@ class _HomeScreenState extends State<SecondGameScreen> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                                 color: category.accepting
-                                    ? Colors.blue[900]
-                                    : Colors.blue[200],
+                                    ? Color.fromARGB(255, 44, 68, 105)
+                                    : null, // Remove the white background color here
                               ),
                               alignment: Alignment.center,
-                              height: 120,
-                              width: 120,
+                              height: 160,
+                              width: 160,
                               margin: EdgeInsets.all(12),
                               child: Image.asset(
                                 category.name!,
-                                height: 80,
-                                width: 80,
+                                height: 120,
+                                width: 120,
                               ),
                             ),
                           );
@@ -259,11 +269,11 @@ class _HomeScreenState extends State<SecondGameScreen> {
   // Functions:
 
   String result() {
-    if (score >= 70) {
-      // player.play('success.wav');
+    if (score >= 30) {
+      player.play('success.wav');
       return 'Awesome!';
     } else {
-      // player.play('tryAgain.wav');
+      player.play('voice/tryAgain.wav');
       return 'Play again to get a better score';
     }
   }
