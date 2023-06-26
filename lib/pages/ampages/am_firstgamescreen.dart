@@ -52,9 +52,9 @@ class _HomeScreenState extends State<FirstGameScreen> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Colors.blue[500]!,
-              Colors.blue[900]!,
-              Colors.cyan[900]!,
+              Color.fromARGB(255, 98, 180, 248)!,
+              Color.fromARGB(255, 61, 97, 151)!,
+              Color.fromARGB(255, 34, 92, 94)!,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -89,7 +89,8 @@ class _HomeScreenState extends State<FirstGameScreen> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headline3!
-                                    .copyWith(color: Colors.blue),
+                                    .copyWith(
+                                        color: Color.fromARGB(255, 83, 87, 90)),
                               ),
                             ],
                           ),
@@ -123,15 +124,15 @@ class _HomeScreenState extends State<FirstGameScreen> {
                             child: Draggable<ItemModel>(
                               data: item,
                               childWhenDragging: Container(
-                                height: 100,
+                                height: 110,
                                 child: Image.asset(item.name!),
                               ),
                               feedback: Container(
-                                height: 100,
+                                height: 110,
                                 child: Image.asset(item.name!),
                               ),
                               child: Container(
-                                height: 70,
+                                height: 100,
                                 child: Image.asset(item.name!),
                               ),
                             ),
@@ -151,13 +152,13 @@ class _HomeScreenState extends State<FirstGameScreen> {
                                 score += 10;
                                 item.accepting = false;
                                 incorrectMatch = false;
-                                // player.play('true.wav');
+                                player.play('true.wav');
                               } else {
                                 setState(() {
                                   incorrectMatch = true;
                                   if (score > 0) score -= 5;
                                   item.accepting = false;
-                                  // player.play('false.wav');
+                                  player.play('false.wav');
                                 });
                               }
                             },
@@ -177,17 +178,22 @@ class _HomeScreenState extends State<FirstGameScreen> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                                 color: item.accepting
-                                    ? Colors.blue[900]
-                                    : Colors.blue[200],
+                                    ? Color.fromARGB(255, 86, 111, 147)
+                                        .withOpacity(0.8)
+                                    : Color.fromARGB(255, 175, 207, 233)
+                                        .withOpacity(0.8),
                               ),
                               alignment: Alignment.center,
-                              height: MediaQuery.of(context).size.width / 6.5,
+                              height: MediaQuery.of(context).size.width / 3.5,
                               width: MediaQuery.of(context).size.width / 3,
                               margin: const EdgeInsets.all(12),
-                              child: Image.asset(
-                                item.name!,
-                                height: 70,
-                                width: 70,
+                              child: AspectRatio(
+                                aspectRatio:
+                                    0.80, // Adjust the aspect ratio as needed
+                                child: Image.asset(
+                                  item.name!,
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                           );

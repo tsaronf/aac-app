@@ -5,7 +5,7 @@ import 'package:path/path.dart';
 class DatabaseHelper {
   static final DatabaseHelper _instance = new DatabaseHelper.internal();
   final List<Map<String, String>> listOfAmharicCategories = [
-    {'name': 'እንስሳ', 'machineName': 'am_animals', 'image': 'dog'},
+    {'name': 'እንስሳት', 'machineName': 'am_animals', 'image': 'dog'},
     {'name': 'ምግብ', 'machineName': 'am_foods', 'image': 'dinner'},
     {'name': 'የሰውነት ክፍል', 'machineName': 'am_bodyparts', 'image': 'humanoid'},
     {'name': 'ቤተሰብ', 'machineName': 'am_family', 'image': 'family'},
