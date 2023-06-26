@@ -17,6 +17,9 @@ dependencies:
   intl: ^0.18.1
 
   cupertino_icons: ^1.0.2
+  flutter_sound: ^9.2.13
+  image_picker: ^0.8.9
+  permission_handler: ^10.3.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
