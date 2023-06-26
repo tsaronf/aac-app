@@ -27,7 +27,7 @@ class FavCard extends StatelessWidget {
       height: 300,
       width: 350,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [
             Color.fromARGB(255, 250, 250, 251),
             Color.fromRGBO(245, 247, 245, 1)
@@ -39,7 +39,7 @@ class FavCard extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          Spacer(),
+          const Spacer(),
           MaterialButton(
             onPressed: () async {
               progressCallback(text);
@@ -59,12 +59,12 @@ class FavCard extends StatelessWidget {
                   height: 90.0,
                   width: 300.0, // set the height of the image
                 ),
-                SizedBox(height: 4.0),
+                const SizedBox(height: 4.0),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     text,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'S S P',
                       fontWeight: FontWeight.bold,
                       fontSize: 16.0,

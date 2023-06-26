@@ -7,7 +7,7 @@ class am_feelings extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Text(
+        title: const Text(
           "ስሜት",
           style: TextStyle(
             fontFamily: 'Source Sans Pro',
@@ -16,10 +16,10 @@ class am_feelings extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Color(0xFFF3F3F3),
+      backgroundColor: const Color(0xFFF3F3F3),
       body: GridView.count(
         crossAxisCount: 2,
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         crossAxisSpacing: 5,
         mainAxisSpacing: 5,
         children: <Widget>[
@@ -67,7 +67,6 @@ class am_feelings extends StatelessWidget {
             image: 'image/nervous.png',
             text: 'ፍርሐት',
             audioFile: 'assets/sounds/afraid-am.mp3',
-
           ),
           lastcard(
             image: 'image/thirsty.png',
