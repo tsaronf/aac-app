@@ -134,238 +134,254 @@ class _AddLocalDataState extends State<AddLocalData> {
   var formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(6),
-      child: Form(
-        key: formKey,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              CustomTextField(
-                textEditingController: titleController,
-                labelText: "Title",
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Title cannot be empty';
-                  }
-                  return null;
-                },
-              ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 5,
+    return Scaffold(
+      backgroundColor: const Color(0xFFF3F3F3),
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: const Text(
+          'Add local data',
+          style: TextStyle(
+            fontFamily: 'Source Sans Pro',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(6),
+        child: Form(
+          key: formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CustomTextField(
+                  textEditingController: titleController,
+                  labelText: "Title",
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Title cannot be empty';
+                    }
+                    return null;
+                  },
                 ),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 1,
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5,
                   ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Row(
-                  children: [
-                    const Text("Category"),
-                    Expanded(
-                      child: DropdownButtonHideUnderline(
-                        child: ButtonTheme(
-                          alignedDropdown: true,
-                          child: DropdownButton(
-                              isExpanded: true,
-                              underline: const Divider(
-                                color: Colors.deepPurple,
-                              ),
-                              hint: Text(
-                                "Category",
-                                style: Theme.of(context).textTheme.bodyLarge,
-                              ),
-                              borderRadius: BorderRadius.circular(5),
-                              style: Theme.of(context).textTheme.bodyLarge,
-                              value: category,
-                              items: categories
-                                  .map(
-                                    (c) => DropdownMenuItem(
-                                      value: c,
-                                      child: Container(
-                                        width:
-                                            MediaQuery.of(context).size.width /
-                                                2,
-                                        margin: const EdgeInsets.symmetric(
-                                            vertical: 3),
-                                        child: Text(
-                                          c,
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                  .toList(),
-                              onChanged: (value) {
-                                setState(() {
-                                  category = value;
-                                });
-                              }),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical: 5,
-                ),
-                decoration: BoxDecoration(
+                  decoration: BoxDecoration(
                     border: Border.all(
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(5)),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      child: image == null
-                          ? Image.asset("assets/placeholder.png")
-                          : Image.file(
-                              image!,
-                              width: MediaQuery.of(context).size.width / 1.6,
-                              height: MediaQuery.of(context).size.height / 4,
-                              fit: BoxFit.cover,
-                            ),
-                    ),
-                    Positioned(
-                      bottom: 0,
-                      right: 10,
-                      child: IconButton(
-                        icon: Icon(
-                          image == null ? Icons.upload : Icons.change_circle,
-                          size: 40,
-                          color: Colors.deepPurpleAccent,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    children: [
+                      const Text("Category"),
+                      Expanded(
+                        child: DropdownButtonHideUnderline(
+                          child: ButtonTheme(
+                            alignedDropdown: true,
+                            child: DropdownButton(
+                                isExpanded: true,
+                                underline: const Divider(
+                                  color: Colors.deepPurple,
+                                ),
+                                hint: Text(
+                                  "Category",
+                                  style: Theme.of(context).textTheme.bodyLarge,
+                                ),
+                                borderRadius: BorderRadius.circular(5),
+                                style: Theme.of(context).textTheme.bodyLarge,
+                                value: category,
+                                items: categories
+                                    .map(
+                                      (c) => DropdownMenuItem(
+                                        value: c,
+                                        child: Container(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              2,
+                                          margin: const EdgeInsets.symmetric(
+                                              vertical: 3),
+                                          child: Text(
+                                            c,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: (value) {
+                                  setState(() {
+                                    category = value;
+                                  });
+                                }),
+                          ),
                         ),
-                        onPressed: () async {
-                          attachImage(context);
-                        },
-                      ),
-                    ),
-                  ],
+                      )
+                    ],
+                  ),
                 ),
-              ),
-              StreamBuilder<RecordingDisposition>(
-                stream: recorder.onProgress,
-                builder: (context, snapshot) {
-                  final duration = snapshot.hasData
-                      ? snapshot.data?.duration
-                      : Duration.zero;
-                  String twoDigits(int n) => n.toString().padLeft(2, '0');
-                  final twoDigitMinutes = twoDigits(
-                    duration!.inMinutes.remainder(60),
-                  );
-                  final twoDigitSeconds = twoDigits(
-                    duration.inSeconds.remainder(60),
-                  );
-                  return Text(
-                    '$twoDigitMinutes: $twoDigitSeconds',
-                    style: const TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  );
-                },
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey,
-                ),
-                onPressed: () {
-                  if (recorder.isRecording) {
-                    stop();
-                  } else {
-                    start();
-                  }
-                },
-                child: Icon(
-                  recorder.isRecording ? Icons.stop : Icons.mic,
-                  size: 50,
-                  color: Colors.deepPurple,
-                ),
-              ),
-              if (audioFile != null)
                 Container(
                   margin: const EdgeInsets.symmetric(
-                    vertical: 10,
+                    vertical: 5,
                   ),
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                      ),
+                      borderRadius: BorderRadius.circular(5)),
                   child: Stack(
                     children: [
-                      CircleAvatar(
-                          radius: 40.0,
-                          backgroundColor: Colors.blue[50],
-                          child: IconButton(
-                            onPressed: () async {
-                              await playAudio();
-                            },
-                            icon: const Icon(Icons.play_arrow),
-                          )),
                       Positioned(
-                        bottom: -15,
-                        right: -2,
+                        child: image == null
+                            ? Image.asset("assets/images/placeholder.png")
+                            : Image.file(
+                                image!,
+                                width: MediaQuery.of(context).size.width / 1.6,
+                                height: MediaQuery.of(context).size.height / 4,
+                                fit: BoxFit.cover,
+                              ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 10,
                         child: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              audioFile = null;
-                              audioFilePath = null;
-                            });
-                          },
-                          icon: const Icon(
-                            Icons.close,
-                            color: Colors.red,
+                          icon: Icon(
+                            image == null ? Icons.upload : Icons.change_circle,
+                            size: 40,
+                            color: Colors.deepPurpleAccent,
                           ),
+                          onPressed: () async {
+                            attachImage(context);
+                          },
                         ),
                       ),
                     ],
                   ),
                 ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                child: ElevatedButton(
-                  onPressed: () {
-                    var currentState = formKey.currentState;
-                    if (currentState!.validate()) {
-                      if (category == null ||
-                          image == null ||
-                          audioFile == null) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              "Pleae fill all fields",
-                              style: TextStyle(
-                                color: Colors.red,
-                              ),
-                            ),
-                            backgroundColor: Colors.grey,
-                          ),
-                        );
-                        return;
-                      }
-                    }
-                    var localData = LocalData(
-                        title: titleController.text,
-                        category: category!,
-                        audioPath: audioFilePath!);
-                    //Todo
-                    //Backend logic to store it to database
+                StreamBuilder<RecordingDisposition>(
+                  stream: recorder.onProgress,
+                  builder: (context, snapshot) {
+                    final duration = snapshot.hasData
+                        ? snapshot.data?.duration
+                        : Duration.zero;
+                    String twoDigits(int n) => n.toString().padLeft(2, '0');
+                    final twoDigitMinutes = twoDigits(
+                      duration!.inMinutes.remainder(60),
+                    );
+                    final twoDigitSeconds = twoDigits(
+                      duration.inSeconds.remainder(60),
+                    );
+                    return Text(
+                      '$twoDigitMinutes: $twoDigitSeconds',
+                      style: const TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    );
                   },
+                ),
+                ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    minimumSize:
-                        Size(MediaQuery.of(context).size.width / 3, 40),
-                    backgroundColor: Colors.deepPurple,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                    backgroundColor: Colors.grey,
+                  ),
+                  onPressed: () {
+                    if (recorder.isRecording) {
+                      stop();
+                    } else {
+                      start();
+                    }
+                  },
+                  child: Icon(
+                    recorder.isRecording ? Icons.stop : Icons.mic,
+                    size: 50,
+                    color: Colors.deepPurple,
+                  ),
+                ),
+                if (audioFile != null)
+                  Container(
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 10,
+                    ),
+                    child: Stack(
+                      children: [
+                        CircleAvatar(
+                            radius: 40.0,
+                            backgroundColor: Colors.blue[50],
+                            child: IconButton(
+                              onPressed: () async {
+                                await playAudio();
+                              },
+                              icon: const Icon(Icons.play_arrow),
+                            )),
+                        Positioned(
+                          bottom: -15,
+                          right: -2,
+                          child: IconButton(
+                            onPressed: () {
+                              setState(() {
+                                audioFile = null;
+                                audioFilePath = null;
+                              });
+                            },
+                            icon: const Icon(
+                              Icons.close,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  child: const Text("Save"),
-                ),
-              )
-            ],
+                Container(
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      var currentState = formKey.currentState;
+                      if (currentState!.validate()) {
+                        if (category == null ||
+                            image == null ||
+                            audioFile == null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                "Pleae fill all fields",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                ),
+                              ),
+                              backgroundColor: Colors.grey,
+                            ),
+                          );
+                          return;
+                        }
+                      }
+                      var localData = LocalData(
+                          title: titleController.text,
+                          category: category!,
+                          audioPath: audioFilePath!);
+                      // Todo
+                      //Backend logic to store it to database
+                    },
+                    style: ElevatedButton.styleFrom(
+                      minimumSize:
+                          Size(MediaQuery.of(context).size.width / 3, 40),
+                      backgroundColor: Colors.deepPurple,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
+                    child: const Text("Save"),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
